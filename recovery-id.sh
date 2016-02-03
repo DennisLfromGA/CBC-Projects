@@ -35,12 +35,15 @@ tmpfile='tmp.txt'
 config='config.txt'
 version='version.txt'
 
+# CBC Recovery-ID folder
+folder="$HOME/Downloads/CBC/recovery-id"
+
 # Output file name
 recovery_tmp='recovery-id.tmp'
 recovery_id='recovery-id.csv'
 
 # Local config file for comparison
-local_config="$HOME/Downloads/CBC/tmp.txt"
+local="${tmpfile}.sav"
 
 ##############################################################################
 # Various warning messages
@@ -489,6 +492,8 @@ show_images() {
 ##############################################################################
 # Okay, do something...
 
+cd $folder || exit 2
+
 # Warn about usage
 if [ -n "${1:-}" ] && [ "$1" != "--config" ]; then
   echo "This program takes no arguments. Just run it."
@@ -524,15 +529,16 @@ fetch_url "$CONFIGURL" "$tmpfile" || \
   gfatal "Unable to download the config file"
 
 # Check to see if the config file has changed.
-if diff -q $tmpfile $local_config 2>&1 >/dev/null; then
+if diff -q $tmpfile $local 2>/dev/null; then
   echo "The recovery images have not changed."
-  echo "No need to proceed with generation of $recovery_id."
+  echo "No need to proceed with generation of '$recovery_id'."
   exit 0
 else
-  echo "The recovery images have changed."
-  echo "Continuing with generation of $recovery_id ..."
+  echo "The recovery images have changed!"
+  cp $tmpfile $local
+  echo "Continuing with generation of '$recovery_id' ..."
+  echo "Be sure to update the github site."
 fi
-exit
 
 # Separate the version info from the images
 grep '^recovery_tool' "$tmpfile" > "$version"
@@ -567,8 +573,10 @@ good_config || gfatal "The config file isn't valid."
 #     ;;
 # esac
 
+
 ## sort recovery id's and save to file
 if [ -r $recovery_tmp ]; then
+  mv $recovery_id /tmp 2>/dev/null
   echo -n "Sorting recovery id's "
   head -n 1  $recovery_tmp        >  $recovery_id
   tail -n +2 $recovery_tmp | sort >> $recovery_id
@@ -576,12 +584,8 @@ else
   fatal "Generation of recovery id's has failed!"
 fi
 
-if [ -r $HOME/Downloads/$recovery_id ]; then
-  mv $HOME/Downloads/$recovery_id /tmp 2>/dev/null
-fi
-
-echo "and placing a copy of $recovery_id in ~/Downloads"
-cp $recovery_id $HOME/Downloads 2>/dev/null || warn "Copy to ~/Downloads has failed!"
+echo "and placing a copy of '$recovery_id' in '$folder'"
+cp $recovery_id $folder 2>/dev/null || warn "Copy to $folder has failed!"
 
 ## uncomment to prompt for removal of temp files
 #prompt "Shall I remove the temporary files now? [y/N] "
