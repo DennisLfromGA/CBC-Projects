@@ -237,7 +237,7 @@ good_config() {
   start_lines=
   end_lines=
 
-  echo "Name${fs}Description${fs}Channel${fs}Version${fs}HWID Match${fs}HWID${fs}File${fs}File Size${fs}URL${fs}Zip File Size${fs}MD5${fs}SHA1" > $recovery_tmp
+  echo "Name${fs}Description${fs}Channel${fs}Version${fs}HWID${fs}File${fs}File Size${fs}URL${fs}Zip File Size${fs}MD5${fs}SHA1" > $recovery_tmp
 
   while read line; do
     line_num=$(( line_num + 1 ))
@@ -317,6 +317,7 @@ good_config() {
             DEBUG "duplicate $key"
           fi
           file="$val"
+          filehwid="$(echo $file | awk -F '_' '{print $3; exit 0}' | tr [a-z] [A-Z])"
           ;;
         filesize)
           if [ -n "$filesize" ]; then
@@ -369,7 +370,7 @@ good_config() {
       ## filesize=1556054016
       ## url=https://dl.google.com/dl/edgedl/chromeos/recovery/chromeos_7077.134.0_peach-pi_recovery_stable-channel_pi-mp.bin.zip
 
-      echo "$name${fs}$desc${fs}$channel${fs}$version${fs}$hwidmatch${fs}${hwid:- }${fs}$file${fs}$filesize${fs}$url${fs}$zipfilesize${fs}$md5${fs}$sha1" >> $recovery_tmp
+      echo "$name${fs}$desc${fs}$channel${fs}$version${fs}$filehwid${fs}$file${fs}$filesize${fs}$url${fs}$zipfilesize${fs}$md5${fs}$sha1" >> $recovery_tmp
   
       line_num=0
       # Prepare for next stanza
@@ -580,13 +581,13 @@ good_config || gfatal "The config file isn't valid."
 #     ;;
 # esac
 
-
 ## sort recovery id's and save to file
 if [ -r $recovery_tmp ]; then
   mv $recovery_id ${recovery_id}.sav 2>/dev/null
   echo -n "Sorting recovery id's "
   head -n 1  $recovery_tmp        >  $recovery_id
   tail -n +2 $recovery_tmp | sort >> $recovery_id
+  rm $recovery_tmp
 else
   fatal "Generation of recovery id's has failed!"
 fi
