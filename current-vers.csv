@@ -68,7 +68,6 @@ ASUS Chromebox CN60,stable-channel,49.0.2623.95,7834.60.0
 Asus Chromebox CN62,beta-channel,49.0.2623.95,7834.60.0
 Asus Chromebox CN62,dev-channel,50.0.2661.32,7978.18.0
 Asus Chromebox CN62,stable-channel,49.0.2623.95,7834.60.0
-,beta-channel,49.0.2623.75,7834.53.0
 Bobicus Chromebook 11,beta-channel,49.0.2623.95,7834.60.0
 Bobicus Chromebook 11,dev-channel,50.0.2661.32,7978.18.0
 Bobicus Chromebook 11,stable-channel,49.0.2623.95,7834.60.0
@@ -96,7 +95,6 @@ Dell Chromebook 13 7310,stable-channel,49.0.2623.95,7834.60.0
 Dell Chromebox,beta-channel,49.0.2623.95,7834.60.0
 Dell Chromebox,dev-channel,50.0.2661.32,7978.18.0
 Dell Chromebox,stable-channel,49.0.2623.95,7834.60.0
-,dev-channel,48.0.2564.48,7647.32.0
 eduGear Chromebook K Series,beta-channel,49.0.2623.95,7834.60.0
 eduGear Chromebook K Series,dev-channel,50.0.2661.32,7978.18.0
 eduGear Chromebook K Series,stable-channel,49.0.2623.95,7834.60.0
@@ -226,7 +224,6 @@ Sector 5 E1 Rugged Chromebook,stable-channel,49.0.2623.95,7834.60.0
 Senkatel C1101 Chromebook,beta-channel,49.0.2623.95,7834.60.0
 Senkatel C1101 Chromebook,dev-channel,50.0.2661.32,7978.18.0
 Senkatel C1101 Chromebook,stable-channel,49.0.2623.95,7834.60.0
-,stable-channel,48.0.2564.116,7647.84.0
 Toshiba Chromebook 2 (2015 Edition),beta-channel,49.0.2623.95,7834.60.0
 Toshiba Chromebook 2 (2015 Edition),dev-channel,50.0.2661.32,7978.18.0
 Toshiba Chromebook 2 (2015 Edition),stable-channel,49.0.2623.95,7834.60.0
