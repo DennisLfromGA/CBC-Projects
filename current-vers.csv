@@ -1,244 +1,247 @@
 Hardware,Track,Chrome Vers.,ChromeOS Vers.
-Acer AC700,beta-channel,50.0.2661.32,7978.18.0
-Acer AC700,dev-channel,50.0.2661.32,7978.18.0
-Acer AC700,stable-channel,49.0.2623.95,7834.60.0
-Acer C720 Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Acer C720 Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Acer C720 Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Acer C740 Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Acer C740 Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Acer C740 Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Acer C7 Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Acer C7 Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Acer C7 Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Acer Chromebase 24,beta-channel,50.0.2661.32,7978.18.0
-Acer Chromebase 24,dev-channel,50.0.2661.32,7978.18.0
-Acer Chromebase 24,stable-channel,49.0.2623.95,7834.60.0
-Acer Chromebase,beta-channel,50.0.2661.32,7978.18.0
-Acer Chromebase,dev-channel,50.0.2661.32,7978.18.0
-Acer Chromebase,stable-channel,49.0.2623.95,7834.60.0
-Acer Chromebook 11,beta-channel,50.0.2661.32,7978.18.0
-Acer Chromebook 11,dev-channel,50.0.2661.32,7978.18.0
-Acer Chromebook 11,stable-channel,49.0.2623.95,7834.60.0
-Acer Chromebook 13,beta-channel,50.0.2661.32,7978.18.0
-Acer Chromebook 13,dev-channel,50.0.2661.32,7978.18.0
-Acer Chromebook 13,stable-channel,49.0.2623.95,7834.60.0
-Acer Chromebook 15,beta-channel,50.0.2661.32,7978.18.0
-Acer Chromebook 15 CB3-531,beta-channel,50.0.2661.32,7978.18.0
-Acer Chromebook 15 CB3-531,dev-channel,50.0.2661.32,7978.18.0
-Acer Chromebook 15 CB3-531,stable-channel,49.0.2623.95,7834.60.0
-Acer Chromebook 15,dev-channel,50.0.2661.32,7978.18.0
-Acer Chromebook 15,stable-channel,49.0.2623.95,7834.60.0
-Acer Chromebook R11,beta-channel,50.0.2661.32,7978.18.0
+Acer AC700,beta-channel,50.0.2661.57,7978.36.0
+Acer AC700,dev-channel,51.0.2688.0,8104.2.0
+Acer AC700,stable-channel,49.0.2623.111,7834.66.0
+Acer C720 Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Acer C720 Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Acer C720 Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Acer C740 Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Acer C740 Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Acer C740 Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Acer C7 Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Acer C7 Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Acer C7 Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Acer Chromebase 24,beta-channel,50.0.2661.57,7978.36.0
+Acer Chromebase 24,dev-channel,51.0.2694.1,8134.0.0
+Acer Chromebase 24,stable-channel,49.0.2623.111,7834.66.0
+Acer Chromebase,beta-channel,50.0.2661.57,7978.36.0
+Acer Chromebase,dev-channel,51.0.2694.1,8134.0.0
+Acer Chromebase,stable-channel,49.0.2623.111,7834.66.0
+Acer Chromebook 11,beta-channel,50.0.2661.57,7978.36.0
+Acer Chromebook 11,dev-channel,51.0.2694.1,8134.0.0
+Acer Chromebook 11,stable-channel,49.0.2623.111,7834.66.0
+Acer Chromebook 13,beta-channel,50.0.2661.57,7978.36.0
+Acer Chromebook 13,dev-channel,51.0.2694.1,8134.0.0
+Acer Chromebook 13,stable-channel,49.0.2623.111,7834.66.0
+Acer Chromebook 15,beta-channel,50.0.2661.57,7978.36.0
+Acer Chromebook 15 CB3-531,beta-channel,50.0.2661.57,7978.36.0
+Acer Chromebook 15 CB3-531,dev-channel,51.0.2694.1,8134.0.0
+Acer Chromebook 15 CB3-531,stable-channel,49.0.2623.111,7834.66.0
+Acer Chromebook 15,dev-channel,51.0.2694.1,8134.0.0
+Acer Chromebook 15,stable-channel,49.0.2623.111,7834.66.0
+Acer Chromebook R11,beta-channel,50.0.2661.57,7978.36.0
 Acer Chromebook R11,dev-channel,46.0.2490.71,7390.59.1
-Acer Chromebook R11,stable-channel,49.0.2623.95,7834.60.0
-Acer Chromebox,beta-channel,50.0.2661.32,7978.18.0
-Acer Chromebox CXI2,beta-channel,50.0.2661.32,7978.18.0
-Acer Chromebox CXI2,dev-channel,50.0.2661.32,7978.18.0
-Acer Chromebox CXI2,stable-channel,49.0.2623.95,7834.60.0
-Acer Chromebox,dev-channel,50.0.2661.32,7978.18.0
-Acer Chromebox,stable-channel,49.0.2623.95,7834.60.0
-AOpen Chromebase Commercial,beta-channel,50.0.2661.32,7978.18.0
-AOpen Chromebase Commercial,dev-channel,50.0.2661.32,7978.18.0
-AOpen Chromebase Commercial,stable-channel,49.0.2623.95,7834.60.0
-AOpen Chromebox Commercial,beta-channel,50.0.2661.32,7978.18.0
-AOpen Chromebox Commercial,dev-channel,50.0.2661.32,7978.18.0
-AOpen Chromebox Commercial,stable-channel,49.0.2623.95,7834.60.0
-Asus Chromebit CS10,beta-channel,50.0.2661.32,7978.18.0
-Asus Chromebit CS10,dev-channel,50.0.2661.32,7978.18.0
-Asus Chromebit CS10,stable-channel,49.0.2623.95,7834.60.0
-Asus Chromebook C200,beta-channel,50.0.2661.32,7978.18.2
-Asus Chromebook C200,dev-channel,50.0.2661.32,7978.18.2
-Asus Chromebook C200,stable-channel,49.0.2623.95,7834.60.0
-ASUS Chromebook C201,beta-channel,50.0.2661.32,7978.18.0
-ASUS Chromebook C201,dev-channel,50.0.2661.32,7978.18.0
-ASUS Chromebook C201,stable-channel,49.0.2623.95,7834.60.0
-Asus Chromebook C300,beta-channel,50.0.2661.32,7978.18.0
-Asus Chromebook C300,dev-channel,50.0.2661.32,7978.18.0
-Asus Chromebook C300,stable-channel,49.0.2623.95,7834.60.0
-ASUS Chromebook Flip C100PA,beta-channel,50.0.2661.32,7978.18.0
-ASUS Chromebook Flip C100PA,dev-channel,50.0.2661.32,7978.18.0
-ASUS Chromebook Flip C100PA,stable-channel,49.0.2623.95,7834.60.0
-ASUS CHROMEBOOOK C202SA,beta-channel,49.0.2623.54,7834.38.0
+Acer Chromebook R11,stable-channel,49.0.2623.111,7834.66.0
+Acer Chromebox,beta-channel,50.0.2661.57,7978.36.0
+Acer Chromebox CXI2,beta-channel,50.0.2661.57,7978.36.0
+Acer Chromebox CXI2,dev-channel,51.0.2694.1,8134.0.0
+Acer Chromebox CXI2,stable-channel,49.0.2623.111,7834.66.0
+Acer Chromebox,dev-channel,51.0.2694.1,8134.0.0
+Acer Chromebox,stable-channel,49.0.2623.111,7834.66.0
+AOpen Chromebase Commercial,beta-channel,50.0.2661.57,7978.36.0
+AOpen Chromebase Commercial,dev-channel,51.0.2694.1,8134.0.0
+AOpen Chromebase Commercial,stable-channel,49.0.2623.111,7834.66.0
+AOpen Chromebox Commercial,beta-channel,50.0.2661.57,7978.36.0
+AOpen Chromebox Commercial,dev-channel,51.0.2694.1,8134.0.0
+AOpen Chromebox Commercial,stable-channel,49.0.2623.111,7834.66.0
+Asus Chromebit CS10,beta-channel,50.0.2661.57,7978.36.0
+Asus Chromebit CS10,dev-channel,51.0.2694.1,8134.0.0
+Asus Chromebit CS10,stable-channel,49.0.2623.111,7834.66.0
+Asus Chromebook C200,beta-channel,50.0.2661.57,7978.36.0
+Asus Chromebook C200,dev-channel,51.0.2694.1,8134.0.0
+Asus Chromebook C200,stable-channel,49.0.2623.111,7834.67.0
+ASUS Chromebook C201,beta-channel,50.0.2661.57,7978.36.0
+ASUS Chromebook C201,dev-channel,51.0.2694.1,8134.0.0
+ASUS Chromebook C201,stable-channel,49.0.2623.111,7834.66.0
+Asus Chromebook C300,beta-channel,50.0.2661.57,7978.36.0
+Asus Chromebook C300,dev-channel,51.0.2694.1,8134.0.0
+Asus Chromebook C300,stable-channel,49.0.2623.111,7834.66.0
+ASUS Chromebook Flip C100PA,beta-channel,50.0.2661.57,7978.36.0
+ASUS Chromebook Flip C100PA,dev-channel,51.0.2694.1,8134.0.0
+ASUS Chromebook Flip C100PA,stable-channel,49.0.2623.111,7834.66.0
+ASUS CHROMEBOOOK C202SA,beta-channel,50.0.2661.57,7978.36.0
 ASUS CHROMEBOOOK C202SA,dev-channel,48.0.2564.48,7647.32.0
-ASUS CHROMEBOOOK C202SA,stable-channel,48.0.2564.116,7647.84.0
-ASUS Chromebox CN60,beta-channel,50.0.2661.32,7978.18.0
-ASUS Chromebox CN60,dev-channel,50.0.2661.32,7978.18.0
-ASUS Chromebox CN60,stable-channel,49.0.2623.95,7834.60.0
-Asus Chromebox CN62,beta-channel,50.0.2661.32,7978.18.0
-Asus Chromebox CN62,dev-channel,50.0.2661.32,7978.18.0
-Asus Chromebox CN62,stable-channel,49.0.2623.95,7834.60.0
-Bobicus Chromebook 11,beta-channel,50.0.2661.32,7978.18.0
-Bobicus Chromebook 11,dev-channel,50.0.2661.32,7978.18.0
-Bobicus Chromebook 11,stable-channel,49.0.2623.95,7834.60.0
-Chromebook PCM-116E,beta-channel,50.0.2661.32,7978.18.0
-Chromebook PCM-116E,dev-channel,50.0.2661.32,7978.18.0
-Chromebook PCM-116E,stable-channel,49.0.2623.95,7834.60.0
-Cr-48,beta-channel,50.0.2661.32,7978.18.0
-Cr-48,dev-channel,50.0.2661.32,7978.18.0
-Cr-48,stable-channel,49.0.2623.95,7834.60.0
-CTL J2 / J4 Chromebook for Education,beta-channel,50.0.2661.32,7978.18.0
-CTL J2 / J4 Chromebook for Education,dev-channel,50.0.2661.32,7978.18.0
-CTL J2 / J4 Chromebook for Education,stable-channel,49.0.2623.95,7834.60.0
-CTL N6 Education Chromebook,beta-channel,50.0.2661.32,7978.18.0
-CTL N6 Education Chromebook,dev-channel,50.0.2661.32,7978.18.0
-CTL N6 Education Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Dell Chromebook 11 (3120),beta-channel,50.0.2661.32,7978.18.0
-Dell Chromebook 11 (3120),dev-channel,50.0.2661.32,7978.18.0
-Dell Chromebook 11 (3120),stable-channel,49.0.2623.95,7834.60.0
-Dell Chromebook 11,beta-channel,50.0.2661.32,7978.18.0
-Dell Chromebook 11,dev-channel,50.0.2661.32,7978.18.0
-Dell Chromebook 11,stable-channel,49.0.2623.95,7834.60.0
-Dell Chromebook 13 7310,beta-channel,50.0.2661.32,7978.18.0
-Dell Chromebook 13 7310,dev-channel,50.0.2661.32,7978.18.0
-Dell Chromebook 13 7310,stable-channel,49.0.2623.95,7834.60.0
-Dell Chromebox,beta-channel,50.0.2661.32,7978.18.0
-Dell Chromebox,dev-channel,50.0.2661.32,7978.18.0
-Dell Chromebox,stable-channel,49.0.2623.95,7834.60.0
-eduGear Chromebook K Series,beta-channel,50.0.2661.32,7978.18.0
-eduGear Chromebook K Series,dev-channel,50.0.2661.32,7978.18.0
-eduGear Chromebook K Series,stable-channel,49.0.2623.95,7834.60.0
-eduGear Chromebook M Series,beta-channel,50.0.2661.32,7978.18.0
-eduGear Chromebook M Series,dev-channel,50.0.2661.32,7978.18.0
-eduGear Chromebook M Series,stable-channel,49.0.2623.95,7834.60.0
-Edxis Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Edxis Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Edxis Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Edxis Education Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Edxis Education Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Edxis Education Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Google Chromebook Pixel (2015),beta-channel,50.0.2661.32,7978.18.0
-Google Chromebook Pixel (2015),dev-channel,50.0.2661.32,7978.18.0
-Google Chromebook Pixel (2015),stable-channel,49.0.2623.95,7834.60.0
-Google Chromebook Pixel,beta-channel,50.0.2661.32,7978.18.0
-Google Chromebook Pixel,dev-channel,50.0.2661.32,7978.18.0
-Google Chromebook Pixel,stable-channel,49.0.2623.95,7834.60.0
-Haier Chromebook 11,beta-channel,50.0.2661.32,7978.18.0
-Haier Chromebook 11,dev-channel,50.0.2661.32,7978.18.0
-Haier Chromebook 11e,beta-channel,50.0.2661.32,7978.18.0
-Haier Chromebook 11e,dev-channel,50.0.2661.32,7978.18.0
-Haier Chromebook 11e,stable-channel,49.0.2623.95,7834.60.0
-Haier Chromebook 11 G2,beta-channel,50.0.2661.32,7978.18.0
-Haier Chromebook 11 G2,dev-channel,50.0.2661.32,7978.18.0
-Haier Chromebook 11 G2,stable-channel,49.0.2623.95,7834.60.0
-Haier Chromebook 11,stable-channel,49.0.2623.95,7834.60.0
-HEXA Chromebook Pi,beta-channel,50.0.2661.32,7978.18.0
-HEXA Chromebook Pi,dev-channel,50.0.2661.32,7978.18.0
-HEXA Chromebook Pi,stable-channel,49.0.2623.95,7834.60.0
-HiSense Chromebook 11,beta-channel,50.0.2661.32,7978.18.0
-HiSense Chromebook 11,dev-channel,50.0.2661.32,7978.18.0
-HiSense Chromebook 11,stable-channel,49.0.2623.95,7834.60.0
-HP Chromebook 11 1100-1199 / HP Chromebook 11 G1,beta-channel,50.0.2661.32,7978.18.0
-HP Chromebook 11 1100-1199 / HP Chromebook 11 G1,dev-channel,50.0.2661.32,7978.18.0
-HP Chromebook 11 1100-1199 / HP Chromebook 11 G1,stable-channel,49.0.2623.95,7834.60.0
-HP Chromebook 11 2000-2099 / HP Chromebook 11 G2,beta-channel,50.0.2661.32,7978.18.0
-HP Chromebook 11 2000-2099 / HP Chromebook 11 G2,dev-channel,50.0.2661.32,7978.18.0
-HP Chromebook 11 2000-2099 / HP Chromebook 11 G2,stable-channel,49.0.2623.95,7834.60.0
-HP Chromebook 11 2100-2299 / HP Chromebook 11 G3/G4,beta-channel,50.0.2661.32,7978.18.0
-HP Chromebook 11 2100-2299 / HP Chromebook 11 G3/G4,dev-channel,50.0.2661.32,7978.18.0
-HP Chromebook 11 2100-2299 / HP Chromebook 11 G3/G4,stable-channel,49.0.2623.95,7834.60.0
-HP Chromebook 14 ak000-099 / HP Chromebook 14 G4,beta-channel,50.0.2661.32,7978.18.0
-HP Chromebook 14 ak000-099 / HP Chromebook 14 G4,dev-channel,50.0.2661.32,7978.18.0
-HP Chromebook 14 ak000-099 / HP Chromebook 14 G4,stable-channel,49.0.2623.95,7834.60.0
-HP Chromebook 14,beta-channel,50.0.2661.32,7978.18.0
-HP Chromebook 14,dev-channel,50.0.2661.32,7978.18.0
-HP Chromebook 14,stable-channel,49.0.2623.95,7834.60.0
-HP Chromebook 14 x000-x999 / HP Chromebook 14 G3,beta-channel,50.0.2661.32,7978.18.0
-HP Chromebook 14 x000-x999 / HP Chromebook 14 G3,dev-channel,50.0.2661.32,7978.18.0
-HP Chromebook 14 x000-x999 / HP Chromebook 14 G3,stable-channel,49.0.2623.95,7834.60.0
-HP Chromebox CB1-(000-099) / HP Chromebox G1/ HP Chromebox for Meetings,beta-channel,50.0.2661.32,7978.18.0
-HP Chromebox CB1-(000-099) / HP Chromebox G1/ HP Chromebox for Meetings,dev-channel,50.0.2661.32,7978.18.0
-HP Chromebox CB1-(000-099) / HP Chromebox G1/ HP Chromebox for Meetings,stable-channel,49.0.2623.95,7834.60.0
-HP Pavilion Chromebook 14,beta-channel,50.0.2661.32,7978.18.0
-HP Pavilion Chromebook 14,dev-channel,50.0.2661.32,7978.18.0
-HP Pavilion Chromebook 14,stable-channel,49.0.2623.95,7834.60.0
-Lenovo 100S Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Lenovo 100S Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Lenovo 100S Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Lenovo N20 Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Lenovo N20 Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Lenovo N20 Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Lenovo N21 Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Lenovo N21 Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Lenovo N21 Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Lenovo ThinkCentre Chromebox,beta-channel,50.0.2661.32,7978.18.0
-Lenovo ThinkCentre Chromebox,dev-channel,50.0.2661.32,7978.18.0
-Lenovo ThinkCentre Chromebox,stable-channel,49.0.2623.95,7834.60.0
-Lenovo ThinkPad 11e Chromebook,beta-channel,50.0.2661.32,7978.18.1
-Lenovo ThinkPad 11e Chromebook,dev-channel,50.0.2661.32,7978.18.1
-Lenovo ThinkPad 11e Chromebook,stable-channel,49.0.2623.95,7834.61.0
-Lenovo Thinkpad X131e Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Lenovo Thinkpad X131e Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Lenovo Thinkpad X131e Chromebook,stable-channel,49.0.2623.95,7834.60.0
-LG Chromebase,beta-channel,50.0.2661.32,7978.18.0
-LG Chromebase,dev-channel,50.0.2661.32,7978.18.0
-LG Chromebase,stable-channel,49.0.2623.95,7834.60.0
-Lumos Education Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Lumos Education Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Lumos Education Chromebook,stable-channel,49.0.2623.95,7834.60.0
-M&A Chromebook,beta-channel,50.0.2661.32,7978.18.0
-M&A Chromebook,dev-channel,50.0.2661.32,7978.18.0
-M&A Chromebook,stable-channel,49.0.2623.95,7834.60.0
-MEDION Chromebook S2015,beta-channel,50.0.2661.32,7978.18.0
-MEDION Chromebook S2015,dev-channel,50.0.2661.32,7978.18.0
-MEDION Chromebook S2015,stable-channel,49.0.2623.95,7834.60.0
-Nexian Chromebook 11.6-inch,beta-channel,50.0.2661.32,7978.18.0
-Nexian Chromebook 11.6-inch,dev-channel,50.0.2661.32,7978.18.0
-Nexian Chromebook 11.6-inch,stable-channel,49.0.2623.95,7834.60.0
-OnHub SRT-AC1900,beta-channel,50.0.2661.32,7978.17.0
-OnHub SRT-AC1900,dev-channel,50.0.2661.18,7978.9.0
+ASUS CHROMEBOOOK C202SA,stable-channel,49.0.2623.111,7834.66.0
+ASUS Chromebox CN60,beta-channel,50.0.2661.57,7978.36.0
+ASUS Chromebox CN60,dev-channel,51.0.2694.1,8134.0.0
+ASUS Chromebox CN60,stable-channel,49.0.2623.111,7834.66.0
+Asus Chromebox CN62,beta-channel,50.0.2661.57,7978.36.0
+Asus Chromebox CN62,dev-channel,51.0.2694.1,8134.0.0
+Asus Chromebox CN62,stable-channel,49.0.2623.111,7834.66.0
+Bobicus Chromebook 11,beta-channel,50.0.2661.57,7978.36.0
+Bobicus Chromebook 11,dev-channel,51.0.2694.1,8134.0.0
+Bobicus Chromebook 11,stable-channel,49.0.2623.111,7834.66.0
+Chromebook PCM-116E,beta-channel,50.0.2661.57,7978.36.0
+Chromebook PCM-116E,dev-channel,51.0.2694.1,8134.0.0
+Chromebook PCM-116E,stable-channel,49.0.2623.111,7834.66.0
+Cr-48,beta-channel,50.0.2661.57,7978.36.0
+Cr-48,dev-channel,51.0.2688.0,8104.2.0
+Cr-48,stable-channel,49.0.2623.111,7834.66.0
+CTL J2 / J4 Chromebook for Education,beta-channel,50.0.2661.57,7978.36.0
+CTL J2 / J4 Chromebook for Education,dev-channel,51.0.2694.1,8134.0.0
+CTL J2 / J4 Chromebook for Education,stable-channel,49.0.2623.111,7834.66.0
+CTL N6 Education Chromebook,beta-channel,50.0.2661.57,7978.36.0
+CTL N6 Education Chromebook,dev-channel,51.0.2694.1,8134.0.0
+CTL N6 Education Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Dell Chromebook 11 (3120),beta-channel,50.0.2661.57,7978.36.0
+Dell Chromebook 11 (3120),dev-channel,51.0.2694.1,8134.0.0
+Dell Chromebook 11 (3120),stable-channel,49.0.2623.111,7834.66.0
+Dell Chromebook 11,beta-channel,50.0.2661.57,7978.36.0
+Dell Chromebook 11,dev-channel,51.0.2694.1,8134.0.0
+Dell Chromebook 11,stable-channel,49.0.2623.111,7834.66.0
+Dell Chromebook 13 7310,beta-channel,50.0.2661.57,7978.36.0
+Dell Chromebook 13 7310,dev-channel,51.0.2694.1,8134.0.0
+Dell Chromebook 13 7310,stable-channel,49.0.2623.111,7834.66.0
+Dell Chromebox,beta-channel,50.0.2661.57,7978.36.0
+Dell Chromebox,dev-channel,51.0.2694.1,8134.0.0
+Dell Chromebox,stable-channel,49.0.2623.111,7834.66.0
+eduGear Chromebook K Series,beta-channel,50.0.2661.57,7978.36.0
+eduGear Chromebook K Series,dev-channel,51.0.2694.1,8134.0.0
+eduGear Chromebook K Series,stable-channel,49.0.2623.111,7834.66.0
+eduGear Chromebook M Series,beta-channel,50.0.2661.57,7978.36.0
+eduGear Chromebook M Series,dev-channel,51.0.2694.1,8134.0.0
+eduGear Chromebook M Series,stable-channel,49.0.2623.111,7834.66.0
+Edxis Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Edxis Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Edxis Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Edxis Education Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Edxis Education Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Edxis Education Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Google Chromebook Pixel (2015),beta-channel,50.0.2661.57,7978.36.0
+Google Chromebook Pixel (2015),dev-channel,51.0.2694.1,8134.0.0
+Google Chromebook Pixel (2015),stable-channel,49.0.2623.111,7834.66.0
+Google Chromebook Pixel,beta-channel,50.0.2661.57,7978.36.0
+Google Chromebook Pixel,dev-channel,51.0.2694.1,8134.0.0
+Google Chromebook Pixel,stable-channel,49.0.2623.111,7834.66.0
+Haier Chromebook 11,beta-channel,50.0.2661.57,7978.36.0
+Haier Chromebook 11,dev-channel,51.0.2694.1,8134.0.0
+Haier Chromebook 11e,beta-channel,50.0.2661.57,7978.36.0
+Haier Chromebook 11e,dev-channel,51.0.2694.1,8134.0.0
+Haier Chromebook 11e,stable-channel,49.0.2623.111,7834.66.0
+Haier Chromebook 11 G2,beta-channel,50.0.2661.57,7978.36.0
+Haier Chromebook 11 G2,dev-channel,51.0.2694.1,8134.0.0
+Haier Chromebook 11 G2,stable-channel,49.0.2623.111,7834.66.0
+Haier Chromebook 11,stable-channel,49.0.2623.111,7834.66.0
+HEXA Chromebook Pi,beta-channel,50.0.2661.57,7978.36.0
+HEXA Chromebook Pi,dev-channel,51.0.2694.1,8134.0.0
+HEXA Chromebook Pi,stable-channel,49.0.2623.111,7834.66.0
+HiSense Chromebook 11,beta-channel,50.0.2661.57,7978.36.0
+HiSense Chromebook 11,dev-channel,51.0.2694.1,8134.0.0
+HiSense Chromebook 11,stable-channel,49.0.2623.111,7834.66.0
+HP Chromebook 11 1100-1199 / HP Chromebook 11 G1,beta-channel,50.0.2661.57,7978.36.0
+HP Chromebook 11 1100-1199 / HP Chromebook 11 G1,dev-channel,51.0.2694.1,8134.0.0
+HP Chromebook 11 1100-1199 / HP Chromebook 11 G1,stable-channel,49.0.2623.111,7834.66.0
+HP Chromebook 11 2000-2099 / HP Chromebook 11 G2,beta-channel,50.0.2661.57,7978.36.0
+HP Chromebook 11 2000-2099 / HP Chromebook 11 G2,dev-channel,51.0.2694.1,8134.0.0
+HP Chromebook 11 2000-2099 / HP Chromebook 11 G2,stable-channel,49.0.2623.111,7834.66.0
+HP Chromebook 11 2100-2299 / HP Chromebook 11 G3/G4,beta-channel,50.0.2661.57,7978.36.0
+HP Chromebook 11 2100-2299 / HP Chromebook 11 G3/G4,dev-channel,51.0.2694.1,8134.0.0
+HP Chromebook 11 2100-2299 / HP Chromebook 11 G3/G4,stable-channel,49.0.2623.111,7834.66.0
+HP Chromebook 14 ak000-099 / HP Chromebook 14 G4,beta-channel,50.0.2661.57,7978.36.0
+HP Chromebook 14 ak000-099 / HP Chromebook 14 G4,dev-channel,51.0.2694.1,8134.0.0
+HP Chromebook 14 ak000-099 / HP Chromebook 14 G4,stable-channel,49.0.2623.111,7834.66.0
+HP Chromebook 14,beta-channel,50.0.2661.57,7978.36.0
+HP Chromebook 14,dev-channel,51.0.2694.1,8134.0.0
+HP Chromebook 14,stable-channel,49.0.2623.111,7834.66.0
+HP Chromebook 14 x000-x999 / HP Chromebook 14 G3,beta-channel,50.0.2661.57,7978.36.0
+HP Chromebook 14 x000-x999 / HP Chromebook 14 G3,dev-channel,51.0.2694.1,8134.0.0
+HP Chromebook 14 x000-x999 / HP Chromebook 14 G3,stable-channel,49.0.2623.111,7834.66.0
+HP Chromebox CB1-(000-099) / HP Chromebox G1/ HP Chromebox for Meetings,beta-channel,50.0.2661.57,7978.36.0
+HP Chromebox CB1-(000-099) / HP Chromebox G1/ HP Chromebox for Meetings,dev-channel,51.0.2694.1,8134.0.0
+HP Chromebox CB1-(000-099) / HP Chromebox G1/ HP Chromebox for Meetings,stable-channel,49.0.2623.111,7834.66.0
+HP Pavilion Chromebook 14,beta-channel,50.0.2661.57,7978.36.0
+HP Pavilion Chromebook 14,dev-channel,51.0.2694.1,8134.0.0
+HP Pavilion Chromebook 14,stable-channel,49.0.2623.111,7834.67.0
+Lenovo 100S Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Lenovo 100S Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Lenovo 100S Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Lenovo N20 Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Lenovo N20 Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Lenovo N20 Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Lenovo N21 Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Lenovo N21 Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Lenovo N21 Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Lenovo N22 Chromebook,beta-channel,50.0.2661.32,7978.18.0
+Lenovo N22 Chromebook,dev-channel,48.0.2564.48,7647.32.0
+Lenovo N22 Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Lenovo ThinkCentre Chromebox,beta-channel,50.0.2661.57,7978.36.0
+Lenovo ThinkCentre Chromebox,dev-channel,51.0.2694.1,8134.0.0
+Lenovo ThinkCentre Chromebox,stable-channel,49.0.2623.111,7834.66.0
+Lenovo ThinkPad 11e Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Lenovo ThinkPad 11e Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Lenovo ThinkPad 11e Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Lenovo Thinkpad X131e Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Lenovo Thinkpad X131e Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Lenovo Thinkpad X131e Chromebook,stable-channel,49.0.2623.111,7834.66.0
+LG Chromebase,beta-channel,50.0.2661.57,7978.36.0
+LG Chromebase,dev-channel,51.0.2694.1,8134.0.0
+LG Chromebase,stable-channel,49.0.2623.111,7834.66.0
+Lumos Education Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Lumos Education Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Lumos Education Chromebook,stable-channel,49.0.2623.111,7834.66.0
+M&A Chromebook,beta-channel,50.0.2661.57,7978.36.0
+M&A Chromebook,dev-channel,51.0.2694.1,8134.0.0
+M&A Chromebook,stable-channel,49.0.2623.111,7834.66.0
+MEDION Chromebook S2015,beta-channel,50.0.2661.57,7978.36.0
+MEDION Chromebook S2015,dev-channel,51.0.2694.1,8134.0.0
+MEDION Chromebook S2015,stable-channel,49.0.2623.111,7834.66.0
+Nexian Chromebook 11.6-inch,beta-channel,50.0.2661.57,7978.36.0
+Nexian Chromebook 11.6-inch,dev-channel,51.0.2694.1,8134.0.0
+Nexian Chromebook 11.6-inch,stable-channel,49.0.2623.111,7834.66.0
+OnHub SRT-AC1900,beta-channel,50.0.2661.55,7978.34.0
+OnHub SRT-AC1900,dev-channel,51.0.2692.0,8125.0.0
 OnHub SRT-AC1900,stable-channel,49.0.2623.77,7834.55.0
-OnHub TGR 1900,beta-channel,50.0.2661.32,7978.17.0
-OnHub TGR 1900,dev-channel,50.0.2661.18,7978.9.0
+OnHub TGR 1900,beta-channel,50.0.2661.55,7978.34.0
+OnHub TGR 1900,dev-channel,51.0.2692.0,8125.0.0
 OnHub TGR 1900,stable-channel,49.0.2623.77,7834.55.0
-Poin2 Chromebook 11,beta-channel,50.0.2661.32,7978.18.0
-Poin2 Chromebook 11,dev-channel,50.0.2661.32,7978.18.0
-Poin2 Chromebook 11,stable-channel,49.0.2623.95,7834.60.0
-Samsung Chromebook 2 11-inch,beta-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook 2 11-inch,dev-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook 2 11-inch,stable-channel,49.0.2623.95,7834.60.0
-Samsung Chromebook 2 11 - XE500C12,beta-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook 2 11 - XE500C12,dev-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook 2 11 - XE500C12,stable-channel,49.0.2623.95,7834.60.0
-Samsung Chromebook 2 13-inch,beta-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook 2 13-inch,dev-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook 2 13-inch,stable-channel,49.0.2623.95,7834.60.0
-Samsung Chromebook 3,beta-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook 3,dev-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook 3,stable-channel,49.0.2623.95,7834.60.0
-Samsung Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook Series 5 550,beta-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook Series 5 550,dev-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook Series 5 550,stable-channel,49.0.2623.95,7834.60.0
-Samsung Chromebook Series 5,beta-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook Series 5,dev-channel,50.0.2661.32,7978.18.0
-Samsung Chromebook Series 5,stable-channel,49.0.2623.95,7834.60.0
-Samsung Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Samsung Chromebox Series 3,beta-channel,50.0.2661.32,7978.18.0
-Samsung Chromebox Series 3,dev-channel,50.0.2661.32,7978.18.0
-Samsung Chromebox Series 3,stable-channel,49.0.2623.95,7834.60.0
-Sector 5 E1 Rugged Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Sector 5 E1 Rugged Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Sector 5 E1 Rugged Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Senkatel C1101 Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Senkatel C1101 Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Senkatel C1101 Chromebook,stable-channel,49.0.2623.95,7834.60.0
-Toshiba Chromebook 2 (2015 Edition),beta-channel,50.0.2661.32,7978.18.0
-Toshiba Chromebook 2 (2015 Edition),dev-channel,50.0.2661.32,7978.18.0
-Toshiba Chromebook 2 (2015 Edition),stable-channel,49.0.2623.95,7834.60.0
-Toshiba Chromebook 2,beta-channel,50.0.2661.32,7978.18.0
-Toshiba Chromebook 2,dev-channel,50.0.2661.32,7978.18.0
-Toshiba Chromebook 2,stable-channel,49.0.2623.95,7834.60.0
-Toshiba Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Toshiba Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Toshiba Chromebook,stable-channel,49.0.2623.95,7834.60.0
-True IDC Chromebook 11,beta-channel,50.0.2661.32,7978.18.0
-True IDC Chromebook 11,dev-channel,50.0.2661.32,7978.18.0
-True IDC Chromebook 11,stable-channel,49.0.2623.95,7834.60.0
-Viglen Chromebook 11,beta-channel,50.0.2661.32,7978.18.0
-Viglen Chromebook 11,dev-channel,50.0.2661.32,7978.18.0
-Viglen Chromebook 11,stable-channel,49.0.2623.95,7834.60.0
-Xolo Chromebook,beta-channel,50.0.2661.32,7978.18.0
-Xolo Chromebook,dev-channel,50.0.2661.32,7978.18.0
-Xolo Chromebook,stable-channel,49.0.2623.95,7834.60.0
+Poin2 Chromebook 11,beta-channel,50.0.2661.57,7978.36.0
+Poin2 Chromebook 11,dev-channel,51.0.2694.1,8134.0.0
+Poin2 Chromebook 11,stable-channel,49.0.2623.111,7834.66.0
+Samsung Chromebook 2 11-inch,beta-channel,50.0.2661.57,7978.36.0
+Samsung Chromebook 2 11-inch,dev-channel,51.0.2694.1,8134.0.0
+Samsung Chromebook 2 11-inch,stable-channel,49.0.2623.111,7834.66.0
+Samsung Chromebook 2 11 - XE500C12,beta-channel,50.0.2661.57,7978.36.0
+Samsung Chromebook 2 11 - XE500C12,dev-channel,51.0.2694.1,8134.0.0
+Samsung Chromebook 2 11 - XE500C12,stable-channel,49.0.2623.111,7834.66.0
+Samsung Chromebook 2 13-inch,beta-channel,50.0.2661.57,7978.36.0
+Samsung Chromebook 2 13-inch,dev-channel,51.0.2694.1,8134.0.0
+Samsung Chromebook 2 13-inch,stable-channel,49.0.2623.111,7834.66.0
+Samsung Chromebook 3,beta-channel,50.0.2661.57,7978.36.0
+Samsung Chromebook 3,dev-channel,51.0.2694.1,8134.0.0
+Samsung Chromebook 3,stable-channel,49.0.2623.111,7834.66.0
+Samsung Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Samsung Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Samsung Chromebook Series 5 550,beta-channel,50.0.2661.57,7978.36.0
+Samsung Chromebook Series 5 550,dev-channel,51.0.2694.1,8134.0.0
+Samsung Chromebook Series 5 550,stable-channel,49.0.2623.111,7834.66.0
+Samsung Chromebook Series 5,beta-channel,50.0.2661.57,7978.36.0
+Samsung Chromebook Series 5,dev-channel,51.0.2688.0,8104.2.0
+Samsung Chromebook Series 5,stable-channel,49.0.2623.111,7834.66.0
+Samsung Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Samsung Chromebox Series 3,beta-channel,50.0.2661.57,7978.36.0
+Samsung Chromebox Series 3,dev-channel,51.0.2694.1,8134.0.0
+Samsung Chromebox Series 3,stable-channel,49.0.2623.111,7834.66.0
+Sector 5 E1 Rugged Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Sector 5 E1 Rugged Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Sector 5 E1 Rugged Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Senkatel C1101 Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Senkatel C1101 Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Senkatel C1101 Chromebook,stable-channel,49.0.2623.111,7834.66.0
+Toshiba Chromebook 2 (2015 Edition),beta-channel,50.0.2661.57,7978.36.0
+Toshiba Chromebook 2 (2015 Edition),dev-channel,51.0.2694.1,8134.0.0
+Toshiba Chromebook 2 (2015 Edition),stable-channel,49.0.2623.111,7834.66.0
+Toshiba Chromebook 2,beta-channel,50.0.2661.57,7978.36.0
+Toshiba Chromebook 2,dev-channel,51.0.2694.1,8134.0.0
+Toshiba Chromebook 2,stable-channel,49.0.2623.111,7834.66.0
+Toshiba Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Toshiba Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Toshiba Chromebook,stable-channel,49.0.2623.111,7834.66.0
+True IDC Chromebook 11,beta-channel,50.0.2661.57,7978.36.0
+True IDC Chromebook 11,dev-channel,51.0.2694.1,8134.0.0
+True IDC Chromebook 11,stable-channel,49.0.2623.111,7834.66.0
+Viglen Chromebook 11,beta-channel,50.0.2661.57,7978.36.0
+Viglen Chromebook 11,dev-channel,51.0.2694.1,8134.0.0
+Viglen Chromebook 11,stable-channel,49.0.2623.111,7834.66.0
+Xolo Chromebook,beta-channel,50.0.2661.57,7978.36.0
+Xolo Chromebook,dev-channel,51.0.2694.1,8134.0.0
+Xolo Chromebook,stable-channel,49.0.2623.111,7834.66.0
