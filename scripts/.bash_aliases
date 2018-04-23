@@ -1,3 +1,7 @@
+#######################################################################
+## To retrieve enter: curl -L http://bit.ly/2qRX9NR -o .bash_aliases ##
+#######################################################################
+
 ### Alias definitions for chromeos
 ### See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
