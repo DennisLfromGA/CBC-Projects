@@ -11,3 +11,9 @@
 ####  It's dead Jim...
 
 - Replaced by the '[Chrome & CrOS Current Versions, Recovery Versions & Chrome OS Devi](https://goo.gl/2hkv7V)'spreadsheet with live feeds.
+
+--------
+
+#### But some things live on...
+
+- Check out [Issues](https://github.com/DennisLfromGA/CBC-Projects/issues) for current 'issues' ;-)
