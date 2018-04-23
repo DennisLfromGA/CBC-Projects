@@ -1,6 +1,12 @@
 #set -x
 #/etc/skel/.bashrc
 
+####################################################
+## To retrieve this file enter one of the below:  ## 
+## curl -L http://bit.ly/2HJzR6s -o .bash_aliases ##
+## wget -q http://bit.ly/2HJzR6s -O .bash_aliases ##
+####################################################
+
 # This file is sourced by all *interactive* bash shells on startup,
 # including some apparently interactive shells such as scp and rcp
 # that can't tolerate any output.  So make sure this doesn't display
@@ -39,7 +45,7 @@ fi
 # Prepend user bin to PATH if exists
 [ -d $HOME/bin ] && PATH="$HOME/bin:$PATH"
 
-PATH=`echo $PATH | tr ':' '\n' | sort | uniq | tr '\n' ':'`
+PATH=$(echo $PATH | tr ':' '\n' | sort | uniq | tr '\n' ':')
 CDPATH=.:~:~/Downloads:/etc:/var
 export PATH CDPATH
 export TERM=xterm-color
