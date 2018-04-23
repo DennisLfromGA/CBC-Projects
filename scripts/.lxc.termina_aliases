@@ -1,3 +1,9 @@
+####################################################
+## To retrieve this file enter one of the below:  ## 
+## curl -L http://bit.ly/2qSVLuz -o .bash_aliases ##
+## wget -q http://bit.ly/2qSVLuz -O .bash_aliases ##
+####################################################
+
 ##
 ## lxc/lxd aliases
  alias lls='lxc list'
