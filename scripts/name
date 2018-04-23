@@ -1,0 +1,567 @@
+## for default bash
+#!/usr/bin/env bash 
+# for termux bash
+##!/data/data/com.termux/files/usr/bin/bash
+
+APPLICATION="${0##*/}"
+TMPDIR='/tmp'
+
+# VERSION format: date +%Y%m%d%H%M%S
+VERSION='20180118171428'
+
+VERHIST="\
+$APPLICATION-20180118171428 : Added Android OS (Termux) version detection
+$APPLICATION-20170615101303 : Updated Chrome OS Firmware version detection
+$APPLICATION-20170216092345 : Added Chrome OS Firmware version
+$APPLICATION-20161101180600 : Added Chrome OS ARC++ version
+$APPLICATION-20160708193839 : Changed Node_Name to \$USER@\$HOSTNAME
+$APPLICATION-20151202012900 : Tweaked crouton version to include date
+$APPLICATION-20150727163658 : Added crouton version to 'crouton' chroots
+$APPLICATION-20150330201407 : Tweaked Raspberry Pi input and output
+$APPLICATION-20150330201407 + also fixed kernel version output
+$APPLICATION-20150329235321 : Added 'edit' option to edit name history file
+$APPLICATION-20150329235321 + also cleaned up and simplified getopts section
+$APPLICATION-20150303175408 : Added 'diff' option to compare old & new
+$APPLICATION-20140623035320 : Added Raspbian OS detection
+$APPLICATION-20140516133520 : Corrected Distribution Release in xNix_Out
+$APPLICATION-20140220184218 : Added Manjaro OS detection
+$APPLICATION-20140215185534 : Minor fixes & syntax changes
+$APPLICATION-20140214175934 : Fixed logic for checking history file
+$APPLICATION-20140214144316 : Fixed output to record Installed date on new systems
+$APPLICATION+20140214144316 + And restored white space at end of 'name' display
+$APPLICATION-20140214132118 : Fixed historical output to display Installed date
+$APPLICATION-20140214131003 : Corrected output for new systems
+$APPLICATION-20140201021643 : Changed rootdev logic to output correct partition
+$APPLICATION-20140119143824 : Added Browser detection to Debian OS
+$APPLICATION-20140119133129 : Re-defined 'help' and 'version history' options and output
+$APPLICATION-20140118184549 : Added Debian OS detection and version history
+$APPLICATION-20140114002004 : Added Version tracking and current date"
+
+Usage="
+##  A bash script to gather pertinent system info. 
+#+ For debian, arch, #!, raspbian, chromeos, and (some) other *nix distros
+
+Displays new(current), was(last), old(history), diff(old->new), or all(old & new) sysinfo name(s)
+
+Usage: $APPLICATION {new/now/is|was|old/then|diff|all}
+     : also {help/Help|version/Version|edit}
+"
+
+#### FUNCTIONS START ####
+Sys_Name()
+{
+  if   [ -r /etc/lsb-release ]; then
+    LSB_CROS=$(grep -iq chromeos /etc/lsb-release;echo $?)
+    LSB_LNUX=$(grep -iq distrib  /etc/lsb-release;echo $?)
+  elif [ -r /etc/arch-release ]; then
+    LSB_ARCH=$(grep -iq arch /etc/os-release;echo $?)
+  elif [ -r /etc/manjaro-release ]; then
+    LSB_MANJ=$(grep -iq manjaro /etc/os-release;echo $?)
+  elif [ -r /etc/lsb-release-crunchbang ]; then
+    LSB_BANG=$(grep -iq bang /etc/lsb-release-crunchbang;echo $?)
+  elif [ -r /etc/debian_version ]; then
+    LSB_DEB=$(grep -iq ^. /etc/debian_version;echo $?)
+    if grep -iq raspbian /etc/os-release; then
+      LSB_RPI=$(grep -iq raspbian /etc/os-release;echo $?)
+      LSB_DEB=''
+    fi
+  elif type getprop >/dev/null 2>&1; then
+      LSB_DROID=$(type getprop >/dev/null 2>&1;echo $?)
+  else
+    LSB_NONE='0'
+  fi
+  
+  if   [ "$LSB_CROS" = 0 ]; then # on CHROME_OS system
+     Sys_ID='CROS'; File_Name=~/.name.cros; File_Hist=~/.name.cros_hist
+  elif [ "$LSB_LNUX" = 0 ]; then # on LINUX_OS system
+     Sys_ID='LNUX'; File_Name=~/.name.lnux; File_Hist=~/.name.lnux_hist
+  elif [ "$LSB_ARCH" = 0 ]; then # on ARCH_OS system
+     Sys_ID='ARCH'; File_Name=~/.name.arch; File_Hist=~/.name.arch_hist
+  elif [ "$LSB_MANJ" = 0 ]; then # on MANJARO_OS system
+     Sys_ID='MANJ'; File_Name=~/.name.manj; File_Hist=~/.name.manj_hist
+  elif [ "$LSB_BANG" = 0 ]; then # on BANG_OS system
+     Sys_ID='BANG'; File_Name=~/.name.bang; File_Hist=~/.name.bang_hist
+  elif [ "$LSB_DEB" = 0 ]; then # on DEBIAN_OS system
+     Sys_ID='DEB'; File_Name=~/.name.deb; File_Hist=~/.name.deb_hist
+  elif [ "$LSB_RPI" = 0 ]; then # on DEBIAN_OS system
+     Sys_ID='RPI'; File_Name=~/.name.rpi; File_Hist=~/.name.rpi_hist
+  elif [ "$LSB_DROID" = 0 ]; then # on ANDROID_OS system
+     Sys_ID='DROID'; File_Name=~/.name.droid; File_Hist=~/.name.droid_hist
+  else [ "$LSB_NONE" = 0 ];      # on 'UNKNOWN OS' system
+     Sys_ID='NONE'; File_Name=~/.name;      File_Hist=~/.name_hist
+  fi
+
+  if [ ! -r $File_Name -a -r ~/.name ];      then mv ~/.name       $File_Name; fi
+  if [ ! -r $File_Hist -a -r ~/.name.old ];  then mv ~/.name.old   $File_Hist; fi
+  if [ ! -r $File_Name -o ! -r $File_Hist ]; then touch $File_Name $File_Hist; fi
+}
+ 
+# Android-specific detections
+DetectDroid() {
+	GP_BProd=$(getprop ro.build.product)  # [cheets_x86_64]
+	GP_BDesc=$(getprop ro.build.description)  # [eve 7.1.1 R64-10176.13.1 4496886 release-keys]
+	GP_PBoard=$(getprop ro.product.board)  # [eve]
+	GP_PBrand=$(getprop ro.product.brand)  # [google]
+	GP_PDevice=$(getprop ro.product.device)  # [eve_cheets]
+	GP_PManuf=$(getprop ro.product.manufacturer)  # [google]
+	GP_PModel=$(getprop ro.product.model)  # [Google Pixelbook]
+	GP_PName=$(getprop ro.product.name)  # [eve]
+	Codename=$(getprop net.bt.name)
+	Version=$(getprop ro.build.version.release)
+	Hostname=$(getprop net.hostname)
+	_device=$(getprop ro.product.device)
+	_model=$(getprop ro.product.model)
+	Device="${_model} (${_device})"
+	if [ $(getprop ro.build.host) == "cyanogenmod" ]; then
+		rom=$(getprop ro.cm.version)
+	else
+		rom=$(getprop ro.build.display.id)
+	fi
+	cpu=$(grep '^Processor' /proc/cpuinfo)
+	cpu=$(echo "$cpu" | sed 's/Processor.*: //')
+}
+
+Get_Args()
+{
+  if [ "$#" -gt 0 ]; then
+    if [ "$1" = "--help" ]; then
+      echo "$Usage" 1>&2; exit 0
+    fi
+    case "$1" in
+      new|now|is)
+      # Show new/current sysinfo name
+      t1="$(tail -n 1 $File_Hist)"
+      echo "Current sysinfo name:"
+      echo "---------------------"
+      echo "Today is   : `date`"
+      echo "$t1"
+      cat $File_Name
+     ;;
+      old|then)
+      # Show old/last sysinfo name(s)
+      t1="$(tail -n 1 $File_Hist)"
+      echo "Past sysinfo name(s):"
+      echo "---------------------"
+      cat $File_Hist | grep -v "$t1"
+     ;;
+      was)
+      # Show old/last sysinfo name
+      if [ "$(wc -l $File_Hist|awk '{print $1;exit}')" -gt 1 ]; then
+        t1="$(tail -n 1 $File_Hist)"
+        t2=$(wc -l $File_Name|awk '{print $1+2;exit}')
+        echo "Last sysinfo name:"
+        echo "------------------"
+        tail -n $t2  $File_Hist | grep -v "$t1"
+      else
+        echo "No system history:"
+        echo "------------------"
+      fi
+     ;;
+      d*|-d*)
+       t1="$(tail -n 1 $File_Hist)"
+       t2=$(wc -l $File_Name|awk '{print $1+2;exit}')
+       tail -n $t2  $File_Hist | grep -v "$t1" >$TMPDIR/name.was
+       echo "$t1"                              >$TMPDIR/name.is
+       cat $File_Name                         >>$TMPDIR/name.is
+       if [ "$Sys_ID" = "CROS" -o "DROID" ]
+         then OPTS='-adT'
+         else OPTS='-adyT'
+       fi
+       diff $OPTS $TMPDIR/name.was $TMPDIR/name.is
+     ;;
+      e*|-e*)
+      # Edit name history file
+       vi $File_Hist
+     ;;
+      all)
+      # Show all sysinfo names - past & present
+       exec $0 old new
+     ;;
+      vh|-vh)
+       echo "$VERHIST" 1>&2
+       exit 0
+     ;;
+      h*|-h*)
+       echo "$Usage" 1>&2
+       exit 0
+     ;;
+      H*|-H*)
+       echo "$Usage" 1>&2
+       echo "$VERHIST" 1>&2
+       exit 0
+     ;;
+      v*|-v*)
+       echo "$APPLICATION-$VERSION" 1>&2
+       exit 0
+     ;;
+      V*|-V*)
+       echo "$VERHIST" 1>&2
+       exit 0
+     ;;
+      *)
+      echo "Unknown option: '$1'"
+      echo "$Usage" 1>&2
+      exit 1
+     ;;
+    esac
+    shift
+    if [ "$#" -ne 0 ]; then
+      exec $0 $1
+    fi
+    exit 0
+  fi
+}
+ 
+CROS_In()
+{
+  # echo "# on CHROME_OS system"
+  # typical /etc/lsb-release:
+  # CHROMEOS_ARC_VERSION=3399754
+  # CHROMEOS_AUSERVER=https://tools.google.com/service/update2
+  # CHROMEOS_BOARD_APPID={9D137383-EB72-4BA9-A523-91AC0853F8AD}
+  # CHROMEOS_CANARY_APPID={90F229CE-83E2-4FAF-8479-E368A34938B1}
+  # CHROMEOS_DEVSERVER=
+  # CHROMEOS_RELEASE_APPID={9D137383-EB72-4BA9-A523-91AC0853F8AD}
+  #*CHROMEOS_RELEASE_BOARD=parrot-signed-mp-v3keys
+  #*CHROMEOS_RELEASE_DESCRIPTION=4319.74.0 (Official Build) stable-channel parrot 
+  #*CHROMEOS_RELEASE_NAME=Chrome OS
+  #*CHROMEOS_RELEASE_TRACK=stable-channel
+  #*CHROMEOS_RELEASE_VERSION=4319.74.0
+  # GOOGLE_RELEASE=4319.74.0
+  #
+    CR_ARCVERS=$( grep -i CHROMEOS_ARC_VERSION      /etc/lsb-release | cut -d= -f2)
+    CR_BOARD=$(   grep -i CHROMEOS_RELEASE_BOARD    /etc/lsb-release | cut -d= -f2)
+    CR_CODENAME=$(grep -i CHROMEOS_RELEASE_CODENAME /etc/lsb-release | cut -d= -f2)                # tvierling
+  # CR_DATE=$(    grep -i CHROMEOS_RELEASE_DESCRIP  /etc/lsb-release | cut -d- -f2 | sed 's/^ //') # Wed Jan 26 11:11:37 EST 2011
+    CR_DESCR=$(   grep -i CHROMEOS_RELEASE_DESCR    /etc/lsb-release | cut -d- -f2 | sed 's/^ //')
+    CR_NAME=$(    grep -i CHROMEOS_RELEASE_NAME     /etc/lsb-release | cut -d= -f2)
+    CR_TRACK=$(   grep -i CHROMEOS_RELEASE_TRACK    /etc/lsb-release | cut -d= -f2)
+    CR_VERSION=$( grep -i CHROMEOS_RELEASE_VERSION  /etc/lsb-release | cut -d= -f2)
+  # CR_FWID=$(    grep -i TARGET_FWID=\"              /usr/sbin/chromeos-firmwareupdate 2>/dev/null | cut -d= -f2 | sed 's/"//g')
+    CR_FWID=$(/usr/sbin/chromeos-firmwareupdate -V | grep '^BIOS version:' | cut -d: -f2 | sed 's/^ //')
+    Browser=$(/opt/google/chrome/chrome --version --no-display 2>/dev/null | cut -d ' ' -f1-3)
+    Root=$(rootdev -s)
+    case "${Root:(-1):1}" in
+      3) CR_ROOT="ROOT-A ($Root)";;
+      5) CR_ROOT="ROOT-B ($Root)";;
+      7) CR_ROOT="ROOT-C ($Root)";;
+    esac
+}
+ 
+LNUX_In()
+{
+  # echo "# on LINUX system"
+  # typical /etc/lsb-release:
+  #*DISTRIB_ID=Ubuntu
+  #*DISTRIB_RELEASE=13.10
+  #*DISTRIB_CODENAME=saucy
+  #*DISTRIB_DESCRIPTION="Ubuntu Saucy Salamander (development branch)"
+  #
+    D_ID=$(      grep -i _ID /etc/lsb-release                            | cut -d= -f2)
+    D_REL=$(     grep -i _REL /etc/lsb-release                           | cut -d= -f2)
+    D_CODENAME=$(grep -i _CODENAME /etc/lsb-release                      | cut -d= -f2)
+    Codename=$(lsb_release    -c 2>/dev/null                             | cut -f2)
+    D_DESCR=$(   grep -i _DESCR /etc/lsb-release                         | cut -d= -f2 | sed 's/"//g')
+    Description=$(lsb_release -d 2>/dev/null                             | cut -f2 | sed 's/"//g')
+    OS_Config=$(grep -i config_version /boot/config-$Kern_Rel 2>/dev/null| cut -d \" -f2)
+    BRWSRF=$(which firefox       2>/dev/null)
+    BRWSRG=$(which google-chrome 2>/dev/null||which chrome           2>/dev/null)
+    BRWSRO=$(which chromium      2>/dev/null||which chromium-browser 2>/dev/null)
+}
+ 
+ARCH_In()
+{
+  # echo "# on ARCH_OS system"
+  # typical /etc/os-release:
+  # NAME="Arch Linux"
+  # ID=arch
+  # PRETTY_NAME="Arch Linux"
+  # ANSI_COLOR="0;36"
+  # HOME_URL="https://www.archlinux.org/"
+  # SUPPORT_URL="https://bbs.archlinux.org/"
+  # BUG_REPORT_URL="https://bugs.archlinux.org/"
+  #
+    D_ID=$(      grep -i ^NAME= /etc/os-release  | cut -d= -f2)
+    D_CODENAME=$(grep -i ^ID= /etc/os-release    | cut -d= -f2)
+    D_DESCR=$(   grep -i ^PRETTY /etc/os-release | cut -d= -f2 | sed 's/"//g')
+    BRWSRF=$(which firefox       2>/dev/null)
+    BRWSRG=$(which google-chrome 2>/dev/null||which chrome           2>/dev/null)
+    BRWSRO=$(which chromium      2>/dev/null||which chromium-browser 2>/dev/null)
+}
+ 
+MANJ_In()
+{
+  # echo "# on MANJ_OS system"
+  # typical /etc/os-release:
+  # NAME="Manjaro Linux"
+  # ID=manjaro
+  # PRETTY_NAME="Manjaro Linux"
+  # ANSI_COLOR="1;32"
+  # HOME_URL="http://www.manjaro.org/"
+  # SUPPORT_URL="http://www.manjaro.org/"
+  # BUG_REPORT_URL="http://bugs.manjaro.org/"
+  #
+    D_ID=$(      grep -i ^NAME= /etc/os-release  | cut -d= -f2)
+    D_CODENAME=$(grep -i ^ID= /etc/os-release    | cut -d= -f2)
+    D_DESCR=$(   grep -i ^PRETTY /etc/os-release | cut -d= -f2 | sed 's/"//g')
+    BRWSRF=$(which firefox       2>/dev/null)
+    BRWSRG=$(which google-chrome 2>/dev/null||which chrome           2>/dev/null)
+    BRWSRO=$(which chromium      2>/dev/null||which chromium-browser 2>/dev/null)
+}
+ 
+BANG_In()
+{
+  # echo "# on BANG_OS system"
+  # typical /etc/lsb-release-crunchbang:
+  # DISTRIB_ID=CrunchBang
+  # DISTRIB_RELEASE=11
+  # DISTRIB_CODENAME=waldorf
+  # DISTRIB_DESCRIPTION="CrunchBang 11 waldorf"
+  #
+  # typical /etc/os-release:
+  # PRETTY_NAME="Debian GNU/Linux 7 (wheezy)"
+  # NAME="Debian GNU/Linux"
+  # VERSION_ID="7"
+  # VERSION="7 (wheezy)"
+  # ID=debian
+  # ANSI_COLOR="1;31"
+  # HOME_URL="http://www.debian.org/"
+  # SUPPORT_URL="http://www.debian.org/support/"
+  # BUG_REPORT_URL="http://bugs.debian.org/"
+  #
+    D_ID=$(      grep -i ^NAME= /etc/os-release            | cut -d= -f2)
+    D_CODENAME=$(grep -i ^ID= /etc/os-release              | cut -d= -f2)
+    D_DESCR=$(   grep -i DESCR /etc/lsb-release-crunchbang | cut -d= -f2 | sed 's/"//g')
+    BRWSRF=$(which firefox       2>/dev/null)
+    BRWSRG=$(which google-chrome 2>/dev/null||which chrome           2>/dev/null)
+    BRWSRO=$(which chromium      2>/dev/null||which chromium-browser 2>/dev/null)
+}
+ 
+DEB_In()
+{
+  # echo "# on Debian_OS system"
+  # typical /etc/debian_version:
+  # jessie/sid
+  # 
+  # Description:        Debian GNU/Linux unstable (sid)
+  # Release:    unstable
+  # Codename:   sid
+  #
+  Description=$(lsb_release -d 2>/dev/null | cut -f2 | sed 's/"//g')
+  Release=$(lsb_release     -r 2>/dev/null | cut -f2)
+  Codename=$(lsb_release    -c 2>/dev/null | cut -f2)
+  DebVers=$(cat /etc/debian_version)
+  BRWSRF=$(which firefox       2>/dev/null)
+  BRWSRG=$(which google-chrome 2>/dev/null||which chrome           2>/dev/null)
+  BRWSRO=$(which chromium      2>/dev/null||which chromium-browser 2>/dev/null)
+}
+
+RPI_In()
+{
+  # echo "# on Raspbian_OS system"
+  # typical /etc/os-release:
+  # PRETTY_NAME="Raspbian GNU/Linux 7 (wheezy)"
+  # NAME="Raspbian GNU/Linux"
+  # VERSION_ID="7"
+  # VERSION="7 (wheezy)"
+  # ID=raspbian
+  # ID_LIKE=debian
+  # ANSI_COLOR="1;31"
+  # HOME_URL="http://www.raspbian.org/"
+  # SUPPORT_URL="http://www.raspbian.org/RaspbianForums"
+  # BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
+    D_ID=$(      grep -i ^NAME= /etc/os-release  | cut -d= -f2)
+    D_CODENAME=$(grep -i ^ID= /etc/os-release    | cut -d= -f2)
+    D_DESCR=$(   grep -i ^PRETTY /etc/os-release | cut -d= -f2 | sed 's/"//g')
+    Version=$(   grep -i ^VERSION= /etc/os-release    | cut -d= -f2)
+    DebVers=$(cat /etc/debian_version)
+    BRWSRF=$(which firefox       2>/dev/null)
+    BRWSRG=$(which google-chrome 2>/dev/null||which chrome           2>/dev/null)
+    BRWSRO=$(which chromium      2>/dev/null||which chromium-browser 2>/dev/null)
+}
+
+DROID_In()
+{
+  # echo "# on ANDROID_OS system"
+  #
+  DetectDroid
+    _user="$(whoami)"
+    USER="${_user:-unknown}"
+    D_ID="$Version"
+    D_REL=$(     grep -i _REL /etc/lsb-release 2>/dev/null               | cut -d= -f2)
+    D_CODENAME=$(grep -i _CODENAME /etc/lsb-release 2>/dev/null          | cut -d= -f2)
+    D_DESCR="$Device"
+    Description=$(lsb_release -d 2>/dev/null                             | cut -f2 | sed 's/"//g')
+    OS_Config=$(grep -i config_version /boot/config-$Kern_Rel 2>/dev/null| cut -d \" -f2)
+    BRWSRF=$(which firefox       2>/dev/null)
+    BRWSRG=$(which google-chrome 2>/dev/null||which chrome           2>/dev/null)
+    BRWSRO=$(which chromium      2>/dev/null||which chromium-browser 2>/dev/null)
+}
+ 
+NONE_In()
+{
+  # echo "# on UNKNOWN_OS system"
+  #
+  Description=$(lsb_release -d 2>/dev/null | cut -f2 | sed 's/"//g')
+  Codename=$(lsb_release    -c 2>/dev/null | cut -f2)
+}
+ 
+CROS_Out()
+{
+  (
+    echo "User@Host  : ${USER}@${Node_Name:-unknown}"
+    echo "Machine    : ${Machine:-unknown}"
+    echo "Rel. name  : ${CR_NAME}"
+    echo "OS Track   : ${CR_TRACK}"
+    echo "OS Release : ${OS_Release:-unknown}"
+    echo "Kernel Rel.: ${Kern_Rel}"
+    [ -n "$CR_ROOT" ] && \
+    echo "CROS Root  : ${CR_ROOT}"
+    echo "OS Board   : ${CR_BOARD}"
+    echo "OS Coder   : ${CR_CODENAME:-Googler}"
+    echo "OS Vers.   : ${CR_VERSION}"
+    echo "Browser Ver: ${Browser}"
+    [ -n "$CR_ARCVERS" ] && \
+    echo "ARC Vers.  : ${CR_ARCVERS}"
+    [ -n "$CR_FWID" ] && \
+    echo "CrOS FWID  : ${CR_FWID}"
+    echo
+  ) >$TMPDIR/name
+  NAME=$(diff -wq $TMPDIR/name $File_Name >/dev/null; echo $?)
+}
+ 
+xNIX_Out()
+{
+  (
+    echo "User@Host  : ${USER}@${Node_Name:-unknown}"
+    echo "Machine    : ${Machine}"
+    echo "Description: ${D_DESCR:-$Description}"
+    echo "Codename   : ${D_CODENAME:-$Codename}"
+    [ -n "$Version" ] && \
+    echo "Version    : ${Version}"
+    [ -n "$DebVers" ] && \
+    echo "Debian Vers: ${DebVers}"
+    [ -n "$D_REL" ] && \
+    echo "Distro Rel.: ${D_REL}"
+    echo "OS Release : ${OS_Release}"
+    [ -n "$OS_Config" ] && \
+    echo "OS Config  : ${OS_Config}"
+    [ -z "$OS_Config" ] && \
+    echo "Kernel Rel.: ${Kern_Rel}"
+    if [ -f /etc/crouton/name ]; then
+      echo "Chroot Name: $(cat /etc/crouton/name)"
+      echo "croutonvers: $(croutonversion|grep crouton:|cut -d'-' -f2)"
+    fi
+    if [ -f "$BRWSRF" ]; then
+      BrowVerF=$($BRWSRF --version --no-display 2>/dev/null)
+      echo "BrowserF   : ${BrowVerF}"
+    fi
+    if [ -f "$BRWSRG" ]; then
+      BrowVerG=$($BRWSRG --version --no-display 2>/dev/null)
+      echo "BrowserG   : ${BrowVerG}"
+    fi
+    if [ -f "$BRWSRO" ]; then
+      BrowVerO=$($BRWSRO --version --no-display 2>/dev/null)
+      echo "BrowserO   : ${BrowVerO}"
+    fi
+    echo
+  ) >$TMPDIR/name
+  NAME=$(diff -wq $TMPDIR/name $File_Name >/dev/null; echo $?)
+}
+ 
+NONE_Out()
+{
+  echo "-------------------------"
+  echo "** no OS system match! **"
+  echo "-------------------------"
+  (
+    echo "User@Host  : ${USER}@${Node_Name:-unknown}"
+    echo "Machine    : ${Machine:-unknown}"
+    echo "Description: ${Description:-unknown}"
+    echo "Codename   : ${Codename:-unknown}"
+    echo "Kernel Rel.: ${Kern_Rel}"
+    echo "OS Release : ${OS_Release:-unknown}"
+    if [ -f /etc/crouton/name ]; then
+      echo "Chroot Name: $(cat /etc/crouton/name)"
+      echo "croutonvers: $(croutonversion|grep crouton:|cut -d'-' -f2)"
+    fi
+    if [ -f "$BRWSRF" ]; then
+      BrowVerF=$($BRWSRF --version --no-display 2>/dev/null)
+      echo "BrowserF   : ${BrowVerF}"
+    fi
+    if [ -f "$BRWSRG" ]; then
+      BrowVerG=$($BRWSRG --version --no-display 2>/dev/null)
+      echo "BrowserG   : ${BrowVerG}"
+    fi
+    if [ -f "$BRWSRO" ]; then
+      BrowVerO=$($BRWSRO --version --no-display 2>/dev/null)
+      echo "BrowserO   : ${BrowVerO}"
+    fi
+    echo
+  ) >$TMPDIR/name
+  NAME=$(diff -wq $TMPDIR/name $File_Name >/dev/null; echo $?)
+}
+ 
+Show_Diff()
+{
+if [ "$NAME" = 1 ]; then
+  if [ -s $File_Name ]; then
+    t1="$(tail -n 1 $File_Hist)"
+    echo "*** System has changed ***"
+    echo "=========================="
+    echo "BEFORE:"
+    echo "$t1"
+    cat $File_Name
+    echo "=========================="
+    echo "NOW:"
+    echo "Updated on : $(date)"
+    cat $TMPDIR/name
+    echo "=========================="
+    cat $File_Name              >> $File_Hist
+    echo "Updated on : $(date)" >> $File_Hist
+  else
+    echo "***   System is new    ***"
+    echo "=========================="
+    echo "Installed  : $(date)" | tee -a $File_Hist
+    cat $TMPDIR/name
+    echo "=========================="
+  fi
+  mv $TMPDIR/name $File_Name
+  if [ "$Sys_ID" = "CROS" ]; then
+    echo "[ if the 'OS Vers.' has changed, ]"
+    echo "[ then re-run '~/bin/rw-rootfs'  ]"
+  fi
+else
+  echo "Today is   : `date`"
+  tail -n 1 $File_Hist
+  cat $File_Name
+fi
+}
+#### FUNCTIONS  END  ####
+ 
+## All systems should have these set
+Node_Name=$(uname -n)   # localhost
+Machine=$(uname -m)     # i686
+Kern_Name=$(uname -s)   # Linux
+Kern_Rel=$(uname -r)    # 3.4.0
+OS_Release=$(uname -sr) # Linux 3.4.0
+OS_Name=$(uname -o)     # GNU/Linux
+
+Sys_Name
+Get_Args "$@"
+
+case $Sys_ID in
+  CROS)  CROS_In;  CROS_Out;;
+  LNUX)  LNUX_In;  xNIX_Out;;
+  ARCH)  ARCH_In;  xNIX_Out;;
+  MANJ)  MANJ_In;  xNIX_Out;;
+  BANG)  BANG_In;  xNIX_Out;;
+  DEB)   DEB_In;   xNIX_Out;;
+  RPI)   RPI_In;   xNIX_Out;;
+  DROID) DROID_In; xNIX_Out;;
+  NONE)  NONE_In;  NONE_Out;;
+esac
+
+Show_Diff
+
+exit
