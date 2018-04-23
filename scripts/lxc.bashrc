@@ -1,6 +1,12 @@
 #set -x
 #/etc/skel/.bashrc
 
+####################################################
+## To retrieve this file enter one of the below:  ## 
+## curl -L http://bit.ly/2HKxAYJ -o .bash_aliases ##
+## wget -q http://bit.ly/2HKxAYJ -O .bash_aliases ##
+####################################################
+
 # This file is sourced by all *interactive* bash shells on startup,
 # including some apparently interactive shells such as scp and rcp
 # that can't tolerate any output.  So make sure this doesn't display
