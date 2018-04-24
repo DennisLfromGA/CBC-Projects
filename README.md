@@ -1,5 +1,7 @@
 # CBC-Projects
-**Chromebook Central Projects**:
+The new & improved **Chromebook Central Projects**:   
+Now includes the awesome **Pixelbook**  
+
 
 1. Crostini [scripts](https://github.com/DennisLfromGA/CBC-Projects/tree/crostini/scripts)
 
