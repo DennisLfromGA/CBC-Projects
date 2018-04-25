@@ -1,8 +1,8 @@
-####################################################
-## To retrieve this file enter one of the below:  ## 
-## curl -L http://bit.ly/2qSVLuz -o .bash_aliases ##
-## wget -q http://bit.ly/2qSVLuz -O .bash_aliases ##
-####################################################
+###########################################################
+## To retrieve this file enter one of the below:         ## 
+## curl -L http://bit.ly/2qSVLuz -o .lxc.termina_aliases ##
+## wget -q http://bit.ly/2qSVLuz -O .lxc.termina_aliases ##
+###########################################################
 
 ##
 ## lxc/lxd aliases
