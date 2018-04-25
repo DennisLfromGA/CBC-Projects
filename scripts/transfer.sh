@@ -5,6 +5,14 @@
 #   Remco Verhoef <remco@dutchcoders.io>
 #
 #   github.com/DennisLfromGA (added logging)
+#
+##################################################
+## To retrieve enter one of the below:          ## 
+## curl -L http://bit.ly/2FefaKH -o transfer.sh ##
+## wget -q http://bit.ly/2FefaKH -O transfer.sh ##
+##################################################
+
+
 
 APPLICATION="${0##*/}"
 RIGHTNOW="$(date)"
