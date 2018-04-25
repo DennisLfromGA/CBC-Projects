@@ -1,8 +1,8 @@
-####################################################
-## To retrieve this file enter one of the below:  ## 
-## curl -L http://bit.ly/2qTDOez -o .bash_aliases ##
-## wget -q http://bit.ly/2qTDOez -O .bash_aliases ##
-####################################################
+########################################################
+## To retrieve this file enter one of the below:      ## 
+## curl -L http://bit.ly/2qTDOez -o .lxc.bash_aliases ##
+## wget -q http://bit.ly/2qTDOez -O .lxc.bash_aliases ##
+########################################################
 
 ### Alias definitions for crostini containers
 ### See /usr/share/doc/bash-doc/examples in the bash-doc package.
