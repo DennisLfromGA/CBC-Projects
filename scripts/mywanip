@@ -1,4 +1,11 @@
 #!/usr/bin/env sh
+
+####################################################
+## To retrieve this file enter one of the below:  ## 
+## curl -L http://bit.ly/2FfbKay -o mywanip       ##
+## wget -q http://bit.ly/2FfbKay -O mywanip       ##
+####################################################
+
 #ipurl="icanhazip.com"
 ipurl="ifconfig.co"
 if   hash dig  2>/dev/null; then cmd="dig +short myip.opendns.com @resolver1.opendns.com"; ipurl=""
