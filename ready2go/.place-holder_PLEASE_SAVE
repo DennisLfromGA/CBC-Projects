@@ -1,3 +1,3 @@
-#### Please leave this in place.   
+Please leave this in place.    
 
-- Removing this file will cause the folder to also get removed when the lxd-conf.bin.tar.gz file is replaced/updated.
+Removing this file will cause the folder to also get removed when the lxd-conf.bin.tar.gz file is replaced/updated.
