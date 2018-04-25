@@ -1,5 +1,5 @@
 ####################################################
-## To retrieve this file enter one of the below:            ## 
+## To retrieve this file enter one of the below:  ## 
 ## curl -L http://bit.ly/2JrjfNV -o .bash_profile ##
 ## wget -q http://bit.ly/2JrjfNV -O .bash_profile ##
 ####################################################
