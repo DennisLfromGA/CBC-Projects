@@ -9,7 +9,7 @@
 # Authors:
 #   Remco Verhoef <remco@dutchcoders.io>
 #
-#   github.com/DennisLfromGA (added logging)
+#   github.com/DennisLfromGA (added logging and d/l link)
 #
 
 
