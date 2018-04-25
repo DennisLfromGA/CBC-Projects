@@ -6,11 +6,11 @@
 #
 #   github.com/DennisLfromGA (added logging)
 #
-##################################################
-## To retrieve enter one of the below:          ## 
-## curl -L http://bit.ly/2FefaKH -o transfer.sh ##
-## wget -q http://bit.ly/2FefaKH -O transfer.sh ##
-##################################################
+###################################################
+## To retrieve this file enter one of the below: ## 
+## curl -L http://bit.ly/2FefaKH -o transfer.sh  ##
+## wget -q http://bit.ly/2FefaKH -O transfer.sh  ##
+###################################################
 
 
 
