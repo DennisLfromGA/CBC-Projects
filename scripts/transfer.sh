@@ -1,3 +1,8 @@
+###################################################
+## To retrieve this file enter one of the below: ## 
+## curl -L http://bit.ly/2FefaKH -o transfer.sh  ##
+## wget -q http://bit.ly/2FefaKH -O transfer.sh  ##
+###################################################
 #
 # Defines transfer alias and provides easy command line file and folder sharing.
 #
@@ -6,12 +11,6 @@
 #
 #   github.com/DennisLfromGA (added logging)
 #
-###################################################
-## To retrieve this file enter one of the below: ## 
-## curl -L http://bit.ly/2FefaKH -o transfer.sh  ##
-## wget -q http://bit.ly/2FefaKH -O transfer.sh  ##
-###################################################
-
 
 
 APPLICATION="${0##*/}"
