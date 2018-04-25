@@ -1,5 +1,5 @@
 ####################################################
-## To retrieve enter one of the below:            ## 
+## To retrieve this file enter one of the below:  ## 
 ## curl -L http://bit.ly/2qRX9NR -o .bash_aliases ##
 ## wget -q http://bit.ly/2qRX9NR -O .bash_aliases ##
 ####################################################
