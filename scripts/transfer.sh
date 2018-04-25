@@ -4,7 +4,7 @@
 # Authors:
 #   Remco Verhoef <remco@dutchcoders.io>
 #
-
+#   github.com/DennisLfromGA (added logging)
 
 APPLICATION="${0##*/}"
 RIGHTNOW="$(date)"
