@@ -16,6 +16,7 @@ if [ -x /usr/bin/dircolors ]; then
    alias egrep='egrep --color=auto'
    alias grep='grep --color=auto'
    alias fgrep='fgrep --color=auto'
+   alias zgrep='zgrep --color=auto'
    alias vdir='ls --color=auto --format=long -h'
 fi
 
@@ -45,7 +46,6 @@ then
    alias find='sudo find'
    alias is=initstats
    alias vis='sudo vi'
-   alias vss='sudo vs'
 fi
 
 ###
@@ -64,7 +64,7 @@ fi
  alias brc='. ~/.bashrc'
  alias bpf='. ~/.bash_profile'
 #alias gvim="gvim $@ &> /dev/null"
- alias vi=vim
+#alias vi=vim
  alias iv='vi'
  alias va='vi ~/.bash_aliases    && source ~/.bash_aliases'
  alias vb='vi ~/.bashrc          && source ~/.bashrc'
@@ -80,6 +80,7 @@ fi
  alias bb=busybox
  alias bbhelp='nl /usr/local/bin/busybox-links-HELP.txt | less'
  alias c='clear'
+ alias cD='cd ~/'
  alias cls='tput clear'
 #alias d='c; name'
  alias d='c; sf; echo; name'
@@ -92,16 +93,16 @@ fi
  alias md='mkdir -p'
 #alias mf='mint-fortune'
 #alias mfx='mint-fortunex'
- alias mnt='mount|grep -e ^/dev/root -e /sd -e /mmcblk -e ^/dev/fuse | sort'
+#alias mnt='mount|grep -e ^/dev/root -e /sd -e /mmcblk -e ^/dev/fuse | sort'
 #alias mnt='mount|grep -e ^/dev/root -e /sd -e /mmcblk -e ^/dev/fuse | sort | column -t'
  alias ri='rm -i'
- alias rmdir='rmdir -v --ignore-fail-on-non-empty'
+#alias rmdir='rmdir -v --ignore-fail-on-non-empty'
  alias rd='rmdir'
 #alias rd='rm -rfd'
 #alias pman='PAGER= man -a'
  alias png='ping -Aa -c5 -w10'
-#alias sc='saycow'
- alias sc='screencast'
+ alias sc='saycow'
+#alias sc='screencast'
  alias sf='screenfetch -E'
  alias sls='screen -ls;ps -ef|grep -i -e pts -e "screen "|grep -iv grep|sort -k +6' # list screens
  alias sr='screen -a -R' # initiate screen session
