@@ -48,7 +48,7 @@ fi
 ### some more handy-dandies
  alias al=alias
  alias alf='alias | grep -Hi'
- alias bb=busybox
+#alias bb=busybox
 #alias bbhelp='nl /usr/local/bin/busybox-links-HELP.txt | less'
  alias c='clear'
  alias cls='tput clear'
@@ -60,10 +60,10 @@ fi
  alias dm='screenfetch -nN -d term,shell,wm,de|sed "s/^ //"'
  alias fh='free -hot'
  alias md='mkdir -p'
- alias mnt='mount|grep -e ^/dev/root -e /sd -e /mmcblk -e ^/dev/fuse | sort'
+#alias mnt='mount|grep -e ^/dev/root -e /sd -e /mmcblk -e ^/dev/fuse | sort'
 #alias mnt='mount|grep -e ^/dev/root -e /sd -e /mmcblk -e ^/dev/fuse | sort | column -t'
  alias ri='rm -i'
- alias rmdir='rmdir -v --ignore-fail-on-non-empty'
+#alias rmdir='rmdir -v --ignore-fail-on-non-empty'
  alias rd='rmdir'
 #alias rd='rm -rfd'
 #alias pman='PAGER= man -a'
