@@ -1,10 +1,12 @@
-####################################################
-## To retrieve this file enter one of the below:  ## 
-## curl -L http://bit.ly/        -o .bash_aliases ##
-## wget -q http://bit.ly/        -O .bash_aliases ##
-####################################################
+#!/bin/sh
 
-### Alias definitions for chromeos
+# .bash_aliases - Aliases for common nix commands.
+###################################################
+## To retrieve this file enter:                  ## 
+## curl -L# http://snip.li/ygv7 -o .bash_aliases ##
+###################################################
+
+### Alias definitions for Linux systems
 ### See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 ###
@@ -44,8 +46,6 @@ then
    alias fdisk='sudo fdisk'
    alias du='sudo du'
    alias find='sudo find'
-   alias is=initstats
-   alias vis='sudo vi'
 fi
 
 ###
@@ -78,7 +78,7 @@ fi
  alias al=alias
  alias alf='alias | grep -Hi'
  alias bb=busybox
- alias bbhelp='nl /usr/local/bin/busybox-links-HELP.txt | less'
+#alias bbhelp='nl /usr/local/bin/busybox-links-HELP.txt | less'
  alias c='clear'
  alias cD='cd ~/Downloads'
  alias cls='tput clear'
@@ -86,7 +86,7 @@ fi
  alias d='c; sf; echo; name'
 #alias d='c; mf; name; updates; vmlist; playon status'
  alias dif='diff -Biw'
- alias dm='screenfetch -nN -d term,shell,wm,de|sed "s/^ //"'
+ alias dm='screenfetch -EnN -d term,shell,wm,de|sed "s/^ //"'
  alias fh='free -hot'
 #alias fx='mint-fortunex'
  alias jar='java -Xmx256M -jar'
