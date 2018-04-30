@@ -1,7 +1,7 @@
 ###########################################################
 ## To retrieve this file enter one of the below:         ## 
-## curl -L http://bit.ly/2qSVLuz -o .lxc.termina_aliases ##
-## wget -q http://bit.ly/2qSVLuz -O .lxc.termina_aliases ##
+## curl -L http://bit.ly/        -o .lxc.termina_aliases ##
+## wget -q http://bit.ly/        -O .lxc.termina_aliases ##
 ###########################################################
 
 ##
