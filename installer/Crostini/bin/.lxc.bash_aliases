@@ -1,10 +1,10 @@
-########################################################
-## To retrieve this file enter one of the below:      ## 
-## curl -L http://bit.ly/        -o .lxc.bash_aliases ##
-## wget -q http://bit.ly/        -O .lxc.bash_aliases ##
-########################################################
+# .lxc.bash_aliases - Aliases for common commands in termaina
+#######################################################
+## To retrieve this file enter:                      ## 
+## curl -L# http://snip.li/aubh -o .lxc.bash_aliases ##
+#######################################################
 
-### Alias definitions for crostini containers
+### Alias definitions for Crostini
 ### See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 ###
@@ -74,7 +74,7 @@ fi
 #alias sr='screen -a -R' # initiate screen session
 #alias sx='screen -X quit' # end screen session
  alias tlab='tar --test-label -af'
- alias wget='wget --retry-connrefused --no-check-certificate -T 60'
+#alias wget='wget --retry-connrefused --no-check-certificate -T 60'
  alias whence='type -p'
  alias wh='which'
  alias wi='whereis'
