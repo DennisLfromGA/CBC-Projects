@@ -1,4 +1,11 @@
-#!/bin/bash
+#!/bin/sh
+
+# build.sh - script to build Crostini self-extracting archive
+##############################################################
+## To retrieve this file enter:                             ## 
+## curl -L# http://snip.li/qyfns   -o Crostini-extractor.sh ##
+##############################################################
+
 PREFIX='Crostini'
 
 echo "Building $PREFIX-extractor"
