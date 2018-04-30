@@ -3,6 +3,12 @@
 # for termux bash
 ##!/data/data/com.termux/files/usr/bin/bash
 
+# name - A script to gather pertinent system info.
+#########################################
+## To retrieve this file enter:        ## 
+## curl -L# http://snip.li/y5l -o name ##
+#########################################
+
 APPLICATION="${0##*/}"
 TMPDIR='/tmp'
 
@@ -163,7 +169,7 @@ Get_Args()
        tail -n $t2  $File_Hist | grep -v "$t1" >$TMPDIR/name.was
        echo "$t1"                              >$TMPDIR/name.is
        cat $File_Name                         >>$TMPDIR/name.is
-       if [ "$Sys_ID" = "CROS" -o "DROID" ]
+       if [ "$Sys_ID" = "CROS" -o "$Sys_ID" = "DROID" ]
          then OPTS='-adT'
          else OPTS='-adyT'
        fi
