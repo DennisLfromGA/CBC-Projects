@@ -1,8 +1,8 @@
-####################################################
-## To retrieve this file enter one of the below:  ## 
-## curl -L http://bit.ly/        -o .profile      ##
-## wget -q http://bit.ly/        -O .profile      ##
-####################################################
+# .profile - Setup some paths and run .bashrc
+###############################################
+## To retrieve this file enter:              ## 
+## curl -L# http://snip.li/iclhw -o .profile ##
+###############################################
 
 # ~/.profile: executed by the command interpreter for login shells.
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
