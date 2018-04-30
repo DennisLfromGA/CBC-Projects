@@ -1,10 +1,17 @@
-#!/bin/bash
+#!/bin/sh
 
+# Crostini-extractor.sh - Crostini archive file.
 ############################################################
-## To retrieve this file enter one of the below: ########### 
-## curl -L http://bit.ly/2HAM6TH -o Crostini-extractor.sh ##
-## wget -q http://bit.ly/2HAM6TH -O Crostini-extractor.sh ##
+## To retrieve this file enter:                           ## 
+## curl -L# http://snip.li/qyfns -o Crostini-extractor.sh ##
 ############################################################
+
+# Built from:
+# decomp.sh - Decompression script for Crostini archive file.
+################################################
+## To retrieve this file enter:               ## 
+## curl -L# http://snip.li/rlnxe -o decomp.sh ##
+################################################
 
 echo "Self Extracting Installer"
 echo ""
@@ -21,7 +28,7 @@ cd $TMPDIR
 sh ./installer.sh
 
 cd $CDIR
-#rm -rf $TMPDIR
+rm -rf $TMPDIR
 
 exit 0
 
