@@ -1,10 +1,10 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
-####################################################
-## To retrieve this file enter one of the below:  ## 
-## curl -L http://bit.ly/        -o mywanip       ##
-## wget -q http://bit.ly/        -O mywanip       ##
-####################################################
+# mywanip - Grab WAN IP from internet.
+############################################
+## To retrieve this file enter:           ## 
+## curl -L# http://snip.li/ee2 -o mywanip ##
+############################################
 
 #ipurl="icanhazip.com"
 ipurl="ifconfig.co"
