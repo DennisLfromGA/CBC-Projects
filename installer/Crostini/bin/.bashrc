@@ -2,8 +2,8 @@
 
 ###################################################
 ## To retrieve this file enter one of the below: ## 
-## curl -L http://bit.ly/2HJzR6s -o .bashrc      ##
-## wget -q http://bit.ly/2HJzR6s -O .bashrc      ##
+## curl -L http://bit.ly/        -o .bashrc      ##
+## wget -q http://bit.ly/        -O .bashrc      ##
 ###################################################
 
 # This file is sourced by all *interactive* bash shells on startup,
