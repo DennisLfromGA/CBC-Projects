@@ -28,6 +28,11 @@ fi
 echo ""
 
 echo "Unbundling files in $DIR"
+for each in ./bin/*; do
+  if [ -s "$each" ]; then
+    chmod +x $each
+  fi
+done
 cp -a ./bin $DIR
 echo ""
 
