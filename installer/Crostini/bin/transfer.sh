@@ -1,8 +1,8 @@
-###################################################
-## To retrieve this file enter one of the below: ## 
-## curl -L http://bit.ly/        -o transfer.sh  ##
-## wget -q http://bit.ly/        -O transfer.sh  ##
-###################################################
+# transfer.sh - Defines transfer alias and provides easy command line file and folder sharing.
+################################################
+## To retrieve this file enter:               ## 
+## curl -L# http://snip.li/zas -o transfer.sh ##
+################################################
 #
 # Defines transfer alias and provides easy command line file and folder sharing.
 #
@@ -11,7 +11,6 @@
 #
 #   github.com/DennisLfromGA (added logging and d/l link)
 #
-
 
 APPLICATION="${0##*/}"
 RIGHTNOW="$(date)"
@@ -24,6 +23,8 @@ elif [ -w "$TERMINA" ]; then
   LOGLOC="$TERMINA"
 elif [ -w "$(pwd)" ]; then
   LOGLOC=$(pwd)
+elif [ -w '/tmp' ]; then
+  LOGLOC='/tmp'
 else
   echo "LOG LOCATION NOT WRITABLE"
 fi
