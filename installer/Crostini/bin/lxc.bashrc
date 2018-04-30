@@ -3,8 +3,8 @@
 
 ###################################################
 ## To retrieve this file enter one of the below: ## 
-## curl -L http://bit.ly/2HKxAYJ -o lxc.bashrc   ##
-## wget -q http://bit.ly/2HKxAYJ -O lxc.bashrc   ##
+## curl -L http://bit.ly/        -o lxc.bashrc   ##
+## wget -q http://bit.ly/        -O lxc.bashrc   ##
 ###################################################
 
 # This file is sourced by all *interactive* bash shells on startup,
