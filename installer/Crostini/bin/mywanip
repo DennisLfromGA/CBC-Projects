@@ -2,8 +2,8 @@
 
 ####################################################
 ## To retrieve this file enter one of the below:  ## 
-## curl -L http://bit.ly/2FfbKay -o mywanip       ##
-## wget -q http://bit.ly/2FfbKay -O mywanip       ##
+## curl -L http://bit.ly/        -o mywanip       ##
+## wget -q http://bit.ly/        -O mywanip       ##
 ####################################################
 
 #ipurl="icanhazip.com"
