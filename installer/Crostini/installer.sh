@@ -1,4 +1,10 @@
-#!/bin/bash
+#!/bin/sh
+
+# installer.sh - Installation script for both termina & container
+#####################################################
+## To retrieve this file enter:                    ##
+## curl -L# http://snip.li/i56h4   -o installer.sh ##
+#####################################################
 
 PREFIX='Crostini'
 
@@ -41,6 +47,7 @@ if [ "$NODE" = 'localhost' ]; then
   echo ". $DIR/bin/lxc.bashrc"
   . $DIR/bin/lxc.bashrc
 else
+  rm $DIR/bin/name
   cp -v $DIR/bin/.bash* $DIR/bin/.prof* $DIR
   echo ". $DIR/.profile"
   . $DIR/.profile
