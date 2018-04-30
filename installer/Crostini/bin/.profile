@@ -1,7 +1,7 @@
 ####################################################
 ## To retrieve this file enter one of the below:  ## 
-## curl -L http://bit.ly/2FdRJ4f -o .profile      ##
-## wget -q http://bit.ly/2FdRJ4f -O .profile      ##
+## curl -L http://bit.ly/        -o .profile      ##
+## wget -q http://bit.ly/        -O .profile      ##
 ####################################################
 
 # ~/.profile: executed by the command interpreter for login shells.
