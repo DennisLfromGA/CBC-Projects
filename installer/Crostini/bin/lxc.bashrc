@@ -1,11 +1,10 @@
-#set -x
 #/etc/skel/.bashrc
 
-###################################################
-## To retrieve this file enter one of the below: ## 
-## curl -L http://bit.ly/        -o lxc.bashrc   ##
-## wget -q http://bit.ly/        -O lxc.bashrc   ##
-###################################################
+# lxc.bashrc - Setup environment, paths, etc.
+#################################################
+## To retrieve this file enter:                ## 
+## curl -L# http://snip.li/y318t -o lxc.bashrc ##
+#################################################
 
 # This file is sourced by all *interactive* bash shells on startup,
 # including some apparently interactive shells such as scp and rcp
