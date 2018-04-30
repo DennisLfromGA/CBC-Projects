@@ -1,8 +1,10 @@
-####################################################
-## To retrieve this file enter one of the below:  ## 
-## curl -L http://bit.ly/        -o .bash_profile ##
-## wget -q http://bit.ly/        -O .bash_profile ##
-####################################################
+#!/bin/sh
+
+# .bash_profile - Ensure .profile is run.
+###################################################
+## To retrieve this file enter:                  ## 
+## curl -L# http://snip.li/vuYg -o .bash_profile ##
+###################################################
 
 # Load .profile, containing login, non-bash related initializations.
 if [ -f ~/.profile ]; then
