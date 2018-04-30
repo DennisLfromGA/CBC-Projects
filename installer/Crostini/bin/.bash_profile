@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # .bash_profile - Ensure .profile is run.
 ###################################################
 ## To retrieve this file enter:                  ## 
