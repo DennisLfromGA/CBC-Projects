@@ -1,7 +1,7 @@
 ########################################################
 ## To retrieve this file enter one of the below:      ## 
-## curl -L http://bit.ly/2qTDOez -o .lxc.bash_aliases ##
-## wget -q http://bit.ly/2qTDOez -O .lxc.bash_aliases ##
+## curl -L http://bit.ly/        -o .lxc.bash_aliases ##
+## wget -q http://bit.ly/        -O .lxc.bash_aliases ##
 ########################################################
 
 ### Alias definitions for crostini containers
