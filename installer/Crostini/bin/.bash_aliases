@@ -1,7 +1,7 @@
 ####################################################
 ## To retrieve this file enter one of the below:  ## 
-## curl -L http://bit.ly/2qRX9NR -o .bash_aliases ##
-## wget -q http://bit.ly/2qRX9NR -O .bash_aliases ##
+## curl -L http://bit.ly/        -o .bash_aliases ##
+## wget -q http://bit.ly/        -O .bash_aliases ##
 ####################################################
 
 ### Alias definitions for chromeos
