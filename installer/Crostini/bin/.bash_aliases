@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # .bash_aliases - Aliases for common nix commands.
 ###################################################
 ## To retrieve this file enter:                  ## 
