@@ -9,3 +9,5 @@ Now includes the awesome **Pixelbook**
 
 - And when trouble arrises don't bother me ;-)  
 Okay, check out _[Issues](https://github.com/DennisLfromGA/CBC-Projects/issues) for current 'issues'_
+----
+[CBC-Projects (tar.gz)](snip.li/gigh)
