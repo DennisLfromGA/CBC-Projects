@@ -1,4 +1,4 @@
-# .lxc.bash_aliases - Aliases for common commands in termaina
+# .lxc.bash_aliases - Aliases for common commands in termina
 #######################################################
 ## To retrieve this file enter:                      ## 
 ## curl -L# http://snip.li/aubh -o .lxc.bash_aliases ##
