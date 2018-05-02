@@ -7,6 +7,11 @@
 ### Alias definitions for Linux systems
 ### See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
+
+###
+### Grab a fresh copy of the ready2go script & run it
+ alias getready2go="curl -Ls http://snip.li/qyfns -o /tmp/Crostini-extractor.sh && sh /tmp/Crostini-extractor.sh"
+
 ###
 ### enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
