@@ -51,7 +51,7 @@ export TERM=xterm-color
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 [ -f $MYSTUFF/.lxc.bash_aliases ] && . $MYSTUFF/.lxc.bash_aliases
 
-# Alias definitions for Cr-48
+# Alias definitions for lxc/lxd
 [ -f $MYSTUFF/.lxc.termina_aliases ] && . $MYSTUFF/.lxc.termina_aliases
 
 # Function definitions.
