@@ -56,6 +56,7 @@ fi
 #alias bb=busybox
 #alias bbhelp='nl /usr/local/bin/busybox-links-HELP.txt | less'
  alias c='clear'
+ alias cD='cd $LXD_CONF'
  alias cls='tput clear'
 #alias d='c; name'
  alias d='c; sf; echo'
