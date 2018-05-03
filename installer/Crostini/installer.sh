@@ -46,11 +46,11 @@ echo "Sourcing files ..."
 if [ "$NODE" = 'localhost' ]; then
   rm $DIR/bin/name
   echo ". $DIR/bin/lxc.bashrc"
-  . $DIR/bin/lxc.bashrc
+  eval . $DIR/bin/lxc.bashrc
 else
   cp -v $DIR/bin/.bash* $DIR/bin/.prof* $DIR
   echo ". $DIR/.profile"
-  . $DIR/.profile
+  eval . $DIR/.profile
 fi
 echo ""
 
