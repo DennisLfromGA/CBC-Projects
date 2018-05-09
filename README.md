@@ -11,4 +11,3 @@ Now includes the awesome **Pixelbook**
 Okay, check out _[Issues](https://github.com/DennisLfromGA/CBC-Projects/issues) for current 'issues'_
 ----
 [CBC-Projects (tar.gz)](http://snip.li/gigh)   
-CBC-Projects (curl it): `curl -L# http://snip.li/gigh -o CBC-Projects-crostini.tar.gz`
