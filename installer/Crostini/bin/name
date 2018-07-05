@@ -4,18 +4,22 @@
 ##!/data/data/com.termux/files/usr/bin/bash
 
 # name - A script to gather pertinent system info.
-#########################################
-## To retrieve this file enter:        ## 
-## curl -L# http://snip.li/y5l -o name ##
-#########################################
+##########################################
+## To retrieve this file enter:         ## 
+## curl -L# http://snip.li/si1e -o name ##
+##########################################
 
 APPLICATION="${0##*/}"
 TMPDIR='/tmp'
 
 # VERSION format: date +%Y%m%d%H%M%S
-VERSION='20180118171428'
+VERSION='20180705131247'
 
 VERHIST="\
+$APPLICATION-20180705131247 : Added snip.li static link
+$APPLICATION-20180701154543 : Tweaked CrOS FWID version detection
+$APPLICATION-20180701001552 : Really corrected CrOS FWID version detection
+$APPLICATION-20180630141336 : Corrected CrOS FWID version detection
 $APPLICATION-20180118171428 : Added Android OS (Termux) version detection
 $APPLICATION-20170615101303 : Updated Chrome OS Firmware version detection
 $APPLICATION-20170216092345 : Added Chrome OS Firmware version
@@ -243,8 +247,12 @@ CROS_In()
     CR_NAME=$(    grep -i CHROMEOS_RELEASE_NAME     /etc/lsb-release | cut -d= -f2)
     CR_TRACK=$(   grep -i CHROMEOS_RELEASE_TRACK    /etc/lsb-release | cut -d= -f2)
     CR_VERSION=$( grep -i CHROMEOS_RELEASE_VERSION  /etc/lsb-release | cut -d= -f2)
-  # CR_FWID=$(    grep -i TARGET_FWID=\"              /usr/sbin/chromeos-firmwareupdate 2>/dev/null | cut -d= -f2 | sed 's/"//g')
-    CR_FWID=$(/usr/sbin/chromeos-firmwareupdate -V | grep '^BIOS version:' | cut -d: -f2 | sed 's/^ //')
+  # CR_FWID=$(    grep -i TARGET_FWID=\"      /usr/sbin/chromeos-firmwareupdate 2>/dev/null | cut -d= -f2 | sed 's/"//g')
+    CR_FWID=$(/usr/sbin/chromeos-firmwareupdate -V 2>/dev/null | grep '^BIOS (RW) version:' | cut -d: -f2 | sed 's/^ //')
+    [ -z "$CR_FWID" ] && \
+    CR_FWID=$(/usr/sbin/chromeos-firmwareupdate -V 2>/dev/null | grep '^BIOS version:'      | cut -d: -f2 | sed 's/^ //')
+    [ -z "$CR_FWID" ] && \
+    CR_FWID=$(crossystem           | grep ^fwid | grep -Eo '[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*' | cut -c2-)
     Browser=$(/opt/google/chrome/chrome --version --no-display 2>/dev/null | cut -d ' ' -f1-3)
     Root=$(rootdev -s)
     case "${Root:(-1):1}" in
